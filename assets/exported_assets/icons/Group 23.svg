@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="78" viewBox="0 0 24 78">
+  <g id="Group_23" data-name="Group 23" transform="translate(-177 -910)">
+    <g id="Group_14" data-name="Group 14" transform="translate(178 911)">
+      <g id="Layer_2" data-name="Layer 2" transform="translate(20.5 54) rotate(90)">
+        <g id="Layer_1" data-name="Layer 1" transform="translate(0 0)">
+          <g id="arrow_back-2" data-name="arrow back-2">
+            <path id="Path_52" data-name="Path 52" d="M21.068,2.074H.932A.989.989,0,0,1,0,1.037.989.989,0,0,1,.932,0H21.068A.989.989,0,0,1,22,1.037.989.989,0,0,1,21.068,2.074Z" transform="translate(0 8.464)" fill="#fff"/>
+            <path id="Path_53" data-name="Path 53" d="M1.038,19A1.05,1.05,0,0,1,.3,18.707a.991.991,0,0,1,0-1.423L8.351,9.5.3,1.718A.985.985,0,0,1,.3.295a1.062,1.062,0,0,1,1.468,0l8.764,8.494a.991.991,0,0,1,0,1.423L1.772,18.707A1.05,1.05,0,0,1,1.038,19Z" transform="translate(11.161)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Rectangle_169" data-name="Rectangle 169" fill="none" stroke="#fff" stroke-width="3">
+        <rect width="22" height="35" rx="11" stroke="none"/>
+        <rect x="1.5" y="1.5" width="19" height="32" rx="9.5" fill="none"/>
+      </g>
+      <ellipse id="Ellipse_174" data-name="Ellipse 174" cx="2" cy="3" rx="2" ry="3" transform="translate(9 9)" fill="#fff"/>
+    </g>
+    <rect id="Rectangle_170" data-name="Rectangle 170" width="24" height="78" transform="translate(177 910)" fill="none" opacity="0"/>
+  </g>
+</svg>
