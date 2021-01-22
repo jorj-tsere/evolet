@@ -10,9 +10,20 @@ $h9_fs: 16px;
 
 $header_height: 100px;
 $header_menu_font_color: #fff;
+
 $header_menu_bg_color: #0750e4;
-
-$content-max-width: 1472px;
-
+// full HD
+$content_max_width_xlg: 1472px;
+// HD
+$content_max_width_lg: 1052px;
+// $content-max-width: 84%;
 $white: #ffffff;
 $main_blue: #0750e4;
+
+$header_menu_item_default_height: 68px; 
+$header_menu_item_default_width: 68px;
+
+$header_menu_item_hover_height: 88px;
+$header_menu_item_hover_width: 88px;
+
+$social_icon_size: 54px; 
