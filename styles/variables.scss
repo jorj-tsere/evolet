@@ -12,13 +12,21 @@ $header_height: 100px;
 $header_menu_font_color: #fff;
 
 $header_menu_bg_color: #0750e4;
+
+$standart_line_height: 1.6;
+
 // full HD
 $content_max_width_xlg: 1472px;
 // HD
 $content_max_width_lg: 1052px;
 // $content-max-width: 84%;
-$white: #ffffff;
-$main_blue: #0750e4;
+$white: rgba(255,255,255, 1);
+$white_light: rgba(255,255,255, 0.9);
+$white_lighter: rgba(255,255,255, 0.5);
+
+$main_blue: rgba(7,80,228,1);
+$main_blue_light: rgba(7,80,228, .8);
+$main_blue_lighter: rgba(7,80,228, .5);
 
 $header_menu_item_default_height: 68px; 
 $header_menu_item_default_width: 68px;
@@ -27,3 +35,9 @@ $header_menu_item_hover_height: 88px;
 $header_menu_item_hover_width: 88px;
 
 $social_icon_size: 54px; 
+
+$txt_color: #2A2A2A;
+$txt_content_color: #545454;
+
+
+
