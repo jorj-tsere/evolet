@@ -1,8 +1,11 @@
 @import 'variables';
 .section__about {
-  padding-top: 138px;
+  padding-top: 138px 0 120px;
   margin: 0 auto;
   position: relative;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: red;
   &::before {
     content: ' ';
     display: block;
@@ -23,7 +26,7 @@
     color: $main_blue_lighter;
     font-size: $h7_fs;
     font-weight: 700;
-    padding-bottom: 90px;
+    padding: 100px 0;
   }
   .section__two--primery-title {
     color: $txt_color;

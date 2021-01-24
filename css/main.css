@@ -146,9 +146,35 @@ html {
   padding-bottom: 300px;
 }
 
+.standart-btn {
+  color: white;
+  background-color: #0750e4;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.section__container {
+  max-width: 1472px;
+  width: 86%;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .section__main {
   position: relative;
-  height: 100vh;
   width: 100%;
   background: url(../assets/exported_assets/background_photos/main_img_gradient_bg.png), url(../assets/exported_assets/background_photos/Rectangle319.png), no-repeat center center;
   background-size: cover;
@@ -466,28 +492,14 @@ html {
   background-repeat: no-repeat;
 }
 
-.standart-btn {
-  color: white;
-  background-color: #0750e4;
-  text-transform: uppercase;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.section__container {
-  max-width: 1472px;
-  width: 86%;
-  margin: 0 auto;
-  z-index: 2;
-  position: relative;
-}
-
 .section__about {
-  padding-top: 138px;
+  padding-top: 138px 0 120px;
   margin: 0 auto;
   position: relative;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: red;
 }
 
 .section__about::before {
@@ -510,7 +522,7 @@ html {
   color: rgba(7, 80, 228, 0.5);
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 90px;
+  padding: 100px 0;
 }
 
 .section__about .section__two--primery-title {
@@ -552,7 +564,12 @@ html {
           transform: scale(1.1);
 }
 
-.idiom .idiom__wrapper {
+.under_about {
+  padding-top: 100px;
+  background-color: green;
+}
+
+.idiom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,10 +577,10 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 100px;
+  padding-bottom: 165px;
 }
 
-.idiom .idiom__wrapper .idiom__txt {
+.idiom .idiom__txt {
   text-transform: capitalize;
   font-size: 50px;
   font-weight: 700;
@@ -573,7 +590,7 @@ html {
   -webkit-text-stroke-color: #0750e4;
 }
 
-.idiom .idiom__wrapper .idiom__txt.idiom__txt--part-two {
+.idiom .idiom__txt.idiom__txt--part-two {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,4 +598,265 @@ html {
       -ms-flex-pack: end;
           justify-content: flex-end;
   line-height: 2.56;
+}
+
+.under_about--title {
+  font-size: 45px;
+  font-weight: bold;
+  color: #2A2A2A;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.under_about--title-secondary {
+  padding-top: 76px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.under_about--title-secondary:hover .title__secondary--txt::after {
+  top: 100px;
+}
+
+.under_about--title-secondary .title__secondary--txt {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+  color: #0750e4;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.under_about--title-secondary .title__secondary--txt::after {
+  content: '';
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: top 0.4s ease 0s;
+  transition: top 0.4s ease 0s;
+  left: calc(100% + 8px);
+  top: -10px;
+  background: url(../assets/exported_assets/icons/arrow_blue.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.section__services {
+  padding-top: 100px;
+}
+
+.section__services--title {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.section__services--title .section__services--title-txt {
+  display: inline-block;
+  height: 30px;
+  text-transform: capitalize;
+  color: #949494;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #fff;
+  line-height: 30px;
+  padding: 0 6px;
+  z-index: 2;
+  position: relative;
+}
+
+.section__services--title .section__services--title-bg {
+  width: 88%;
+  position: absolute;
+  height: 2px;
+  left: 12%;
+  top: 50%;
+  background-color: rgba(42, 42, 42, 0.1);
+}
+
+.section__services--title .section__services--title-bg .title__backgroundg--rounded-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border: 2px solid rgba(42, 42, 42, 0.1);
+  position: absolute;
+  left: 0;
+  top: -4px;
+  border-radius: 50%;
+}
+
+.services_content_wrapper {
+  position: relative;
+  margin-top: 90px;
+  height: 626px;
+}
+
+.services_content_wrapper .section__container {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  height: 100%;
+}
+
+.services_content_wrapper .services__navigation {
+  width: 100%;
+  position: absolute;
+  bottom: calc(100% - 54px);
+}
+
+.services_content_wrapper .services__navigation .services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item {
+  height: 108px;
+  width: 108px;
+  position: relative;
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item:hover .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.item__active .services__list--item-content {
+  background-color: #0750e4;
+  border: #0750e4;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.consulting:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.develope:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/code.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.achitecture:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/ruler-pencil.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.qa:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/badge.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.audit:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/icon_audit.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.launch:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/rocket.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.consulting .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.develope .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/code.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.achitecture .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/ruler-pencil.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.qa .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/badge.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.audit .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/icon_audit.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.launch .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/rocket_default.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.item__active .services__list--item-txt {
+  display: none;
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item .services__list--item-content {
+  border: 2px solid #e9e9e9;
+  border-radius: 50%;
+  width: 108px;
+  height: 108px;
+  -webkit-transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, border 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, border 0.2s ease-in-out, background-color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  background: #fff url(../assets/exported_assets/icons/icon_question_ideas.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item .services__list--item-txt {
+  position: absolute;
+  top: calc(100% + 24px);
+  width: 152px;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.services_content_wrapper .service__container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid red;
+  height: 526px;
+  width: 100%;
+  top: 170px;
+}
+
+.services_content_wrapper .service__container .service__img {
+  width: 728px;
+  height: 100%;
+  background: url(../assets/exported_assets/expertise_photos/Rectangle.png);
+}
+
+.services_content_wrapper_bg {
+  border: 2px solid rgba(42, 42, 42, 0.1);
+  position: absolute;
+  height: 100%;
+  width: calc((100vw - ((100vw - 1472px) / 2)) + 40px);
+}
+
+.services_content_wrapper_bg::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border: 2px solid rgba(42, 42, 42, 0.1);
+  border-radius: 50%;
+  top: -5px;
+  right: -6px;
 }

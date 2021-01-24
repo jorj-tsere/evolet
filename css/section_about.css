@@ -1,7 +1,11 @@
 .section__about {
-  padding-top: 138px;
+  padding-top: 138px 0 120px;
   margin: 0 auto;
   position: relative;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: red;
 }
 
 .section__about::before {
@@ -24,7 +28,7 @@
   color: rgba(7, 80, 228, 0.5);
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 90px;
+  padding: 100px 0;
 }
 
 .section__about .section__two--primery-title {
