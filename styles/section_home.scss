@@ -1,6 +1,7 @@
 @import 'variables';
 
 .section__main {
+  height: 100vh;
   position: relative;
   width: 100%;
   background: url(../assets/exported_assets/background_photos/main_img_gradient_bg.png),
@@ -8,7 +9,6 @@
     no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode: darken;
 }
 
 .head__wrapper {

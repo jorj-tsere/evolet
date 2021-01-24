@@ -9,6 +9,15 @@
       rel="icon"
       href="./assets/Logo/Favicon/favicon_Blue_transparent.ico"
     />
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- MAIN SECTION STARTS -->
@@ -77,6 +86,9 @@
     <!-- MAIN SECTION ENDS -->
     <!-- SECOND ABOUT STARTS -->
     <section class="section section__about">
+      <div class="pseudo_line_bg">
+        <span class="pseudo_line_rounded-bullet"></span>
+      </div>
       <div class="section__container">
         <h3 class="section__two--secondary-title">
           Evolet Enables You To Reach You Greatest Business Potential With Our
@@ -151,7 +163,7 @@
                 <div class="services__list--item-txt">consulting</div>
               </li>
               <li class="services__list--item develope">
-                <div class="services__list--item-content "></div>
+                <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">Developing Software</div>
               </li>
               <li class="services__list--item achitecture">
@@ -178,15 +190,141 @@
           </nav>
           <div class="service__container">
             <article class="service__description">
-               <h3 class="service__description--title"></h3>
-               <p class="service__description--content"></p>
+              <h3
+                class="service__description--title"
+                id="service_description_title"
+              >
+                Developing Software
+              </h3>
+              <p
+                class="service__description--content"
+                id="service_description_content"
+              >
+                We continue to reimagine what innovation in the tech economy
+                means, which is why we continuously offer our partners only
+                cutting-edge software engineering. Working with your demands and
+                specific vision to produce an end result that will not only be
+                exceeding your expectations but aiding your business in ultimate
+                growth.
+              </p>
             </article>
             <div class="service__img">
-                
+              <img
+                src="./assets/exported_assets/expertise_photos/Rectangle.png"
+                alt=""
+                class="service__img--source"
+              />
             </div>
           </div>
         </div>
       </div>
+      <div class="section__container part_two">
+        <h2 class="services--title">Interested in our services ?</h2>
+      </div>
+      <div class="section__container part_three">
+        <div class="inner__section--container">
+          <p class="inner__section--container-content">
+            Read more in-depth on what we have to offer or simply contact us to
+            see how we can help!
+            <span class="line__hover"></span>
+            <span class="pseudo__arrow">
+              <img
+                src="./assets/exported_assets/icons/arrow_white.svg"
+                alt="arrow"
+              />
+            </span>
+          </p>
+        </div>
+      </div>
     </section>
+
+    <!--  -->
+    <article class="idiom__result--driven">
+      <h2 class="idiom__title">
+        Groundbreaking, Result-Driven, and Customer-Centered
+        <span class="quotes quotes_start"></span>
+        <span class="quotes quotes_end"></span>
+      </h2>
+      <h3 class="idiom__answer">
+        These Are Exactly The Words Our Clients Use To Describe Us
+      </h3>
+    </article>
+
+    <!-- <section class="section section__partners">
+      <div class="section__container">
+        <h3 class="section__partners--title">
+          Renowned Businesses Trust Our Experience
+        </h3>
+        <div class="partner__list"></div>
+        <div class="section__partners--secondary-title-box">
+            <h3 class="section__partners--secondary-title-part-one">Constantly reimagining and transforming industries through our innovative and adaptive methods</h3>
+            <h3 class="section__partners--secondary-title-part-two">That’s why businesses partner and trust us.</h3>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section section__projects">
+      <h2 class="section__services--title">
+        <span class="section__services--title-bg">
+          <span class="title__backgroundg--rounded-bullet"></span>
+        </span>
+        <span class="section__services--title-txt">Evolet’s Projects</span>
+      </h2>
+
+      <nav class="projects">
+        <ul class="projects__lists">
+          <li class="project_item">FinTech</li>
+          <li class="project_item">Gambling</li>
+          <li class="project_item">Telecommunications</li>
+          <li class="project_item">Other</li>
+        </ul>
+      </nav>
+      <div class="project__details">
+        <div class="project__details--img"></div>
+      </div>
+      <div class="project__details--description">
+        <h3 class="project__details--description-title"></h3>
+      </div>
+    </section>
+
+
+    <div class="swiper-container" style="height: 400px;text-align:center;">
+      <div class="swiper-pagination"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div>
+            test title
+          </div>
+          <div style="text-align: center;">
+            <img src="./assets/exported_assets/icons/badge.svg"  alt="asdas">
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae in cumque quidem tempora vero itaque nesciunt dolores totam et cupiditate. At, quam id vitae earum non doloremque illum ullam autem.
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            test title
+          </div>
+          <div style="text-align: center;">
+            <img src="./assets/exported_assets/icons/code.svg"  alt="asdas">
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae in cumque quidem tempora vero itaque nesciunt dolores totam et cupiditate. At, quam id vitae earum non doloremque illum ullam autem.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos tempora veritatis laudantium aspernatur id, autem facilis alias a, voluptate nam quisquam, modi iusto similique eaque dolor ipsa quod enim soluta.
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      
+    </div>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+    </script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 .under_about {
   padding-top: 100px;
-  background-color: green;
 }
 
 .idiom {
@@ -43,7 +42,7 @@
 }
 
 .under_about--title-secondary {
-  padding-top: 76px;
+  padding: 76px 0 120px 0;
   display: block;
   text-align: center;
   cursor: pointer;

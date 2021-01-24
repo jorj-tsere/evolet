@@ -177,18 +177,33 @@
   .service__container {
     position: absolute;
     display: flex;
-    border: 1px solid red;
-    height: $services_content_wrapper_hull_hd_heigth - 100px;
+    height: 460px;
+    overflow: hidden;
     width: 100%;
-    top: 170px;
-    .service__description{
-      width: calc (100% - 728px);
+    top: 186px;
+    .service__description {
+      width: calc(100% - 730px);
       height: 100%;
-    }  
+      .service__description--title {
+        font-size: $h2_fs;
+        font-weight: bold;
+        color: $main_blue;
+        padding-bottom: $standart_padding + 4px;
+      }
+      .service__description--content {
+        line-height: $standart_line_height;
+        font-size: $h9_fs;
+        color: $txt_content_color;
+        width: 604px;
+      }
+    }
     .service__img {
+      display: flex;
+      align-items: flex-end;
       width: 728px;
       height: 100%;
-      background: url(../assets/exported_assets/expertise_photos/Rectangle.png);
+      // 460px
+      // background: url(../assets/exported_assets/expertise_photos/Rectangle.png);
     }
   }
 }
@@ -208,5 +223,137 @@
     border-radius: 50%;
     top: -5px;
     right: -6px;
+  }
+}
+
+.section__services {
+  .section__container {
+    &.part_two {
+      padding-top: $standart_padding * 9;
+    }
+    &:hover {
+      .line__hover {
+        opacity: 1;
+        background-color: red;
+      }
+    }
+    &.part_three {
+      margin-top: 64px;
+      background-color: $main_blue;
+      height: 288px;
+      transition: width 0.4s ease-in-out;
+      &:hover {
+        width: 100%;
+        max-width: 100%;
+      }
+      .inner__section--container {
+        width: $content_max_width_xlg;
+        margin: 0 auto;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        .inner__section--container-content {
+          font-size: $h6_fs;
+          position: relative;
+          color: #fff;
+          width: 716px;
+          line-height: $standart_line_height + 0.2;
+          padding-left: $standart_padding * 4;
+          .line__hover {
+            display: inline-block;
+            position: absolute;
+            left: $standart_padding * 2;
+            top: 22px;
+            background-color: $white;
+            width: 40px;
+            height: 3px;
+            opacity: 1;
+          }
+
+          .pseudo__arrow {
+            display: inline-block;
+            position: absolute;
+            left: calc(100% + 10px);
+            bottom: -12px;
+            opacity: 1;
+            img {
+              height: 52px;
+            }
+          }
+        }
+      }
+    }
+
+    .services--title {
+      color: #3e3e3e;
+      font-size: $h2_fs;
+      font-weight: bold;
+    }
+  }
+}
+
+.idiom__result--driven {
+  width: 100%;
+  height: 560px;
+  position: relative;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url(../assets/exported_assets/background_photos/igo-mid-winter-conference-network.png)
+      no-repeat center center;
+    opacity: 0.1;
+  }
+
+  .idiom__title {
+    font-size: $h4_fs;
+    font-weight: bold;
+    color: $main_blue;
+    padding-bottom: 36px;
+    position: relative;
+    padding:20px 50px;
+
+    .quotes {
+      position: absolute;
+      width: 86px;
+      height: 86px;
+      &.quotes_start {
+        bottom: 100%;
+        right: 100%;
+        background: url(../assets/exported_assets/icons/quotes_start.svg)
+          no-repeat center center;
+      }
+      &.quotes_end {
+        top: 100%;
+        left: 100%;
+        background: url(../assets/exported_assets/icons/quoutes_end.svg)
+          no-repeat center center;
+      }
+    }
+  }
+  .idiom__answer {
+    font-size: $h7_fs;
+    color: $txt_color;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 36px;
+      height: 2px;
+      right: calc(100% + 10px);
+      top: 50%;
+      background-color: $txt_color;
+    }
   }
 }

@@ -1,0 +1,59 @@
+@import 'variables';
+
+.section__projects--title {
+  display: block;
+  text-align: center;
+  position: relative;
+  .section__projects--title-txt {
+    display: inline-block;
+    height: 30px;
+    text-transform: capitalize;
+    color: #949494;
+    font-size: $h5_fs;
+    font-weight: 700;
+    background-color: #fff;
+    line-height: 30px;
+    padding: 0 6px;
+    z-index: 2;
+    position: relative;
+  }
+  .section__projects--title-bg {
+    width: 88%;
+    position: absolute;
+    height: 2px;
+    left: 12%;
+    top: 50%;
+    background-color: rgba(42, 42, 42, 0.1);
+    .title__backgroundg--rounded-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+      border: 2px solid rgba(42, 42, 42, 0.1);
+      position: absolute;
+      left: 0;
+      top: -4px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.projects {
+  margin-top: 100px;
+  .projects__lists {
+    display: flex;
+    justify-content: center;
+    .project_item {
+      padding: 4px 6px;
+      margin-left: 92px;
+      font-size: $h5_fs;
+      color: $txt_color;
+      border-bottom: 4px solid transparent;
+      transition: all 0.4s ease-in-out;
+      &:hover
+      &.active {
+        color: $main_blue;
+        border-bottom: 4px solid $main_blue;
+      }
+    }
+  }
+}

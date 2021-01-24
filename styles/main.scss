@@ -19,15 +19,14 @@ html {
 }
 
 .section__container {
-  max-width: $content_max_width_xlg;
-  width: 86%;
+  // max-width: $content_max_width_xlg;
+  width: $content_max_width_xlg;
   margin: 0 auto;
   z-index: 2;
   position: relative;
 }
 
 section {
-  height: 100vh;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -41,4 +40,7 @@ section {
 @import 'section_under_about';
 
 @import 'section_services';
+
+@import 'section_projects';
+
 
