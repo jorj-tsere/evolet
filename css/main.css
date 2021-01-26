@@ -1015,7 +1015,7 @@ section {
   color: #0750e4;
   padding-bottom: 36px;
   position: relative;
-  padding: 20px 50px;
+  padding: 20px 50px 40px 50px;
 }
 
 .idiom__result--driven .idiom__title .quotes {
@@ -1050,6 +1050,160 @@ section {
   right: calc(100% + 10px);
   top: 50%;
   background-color: #2A2A2A;
+}
+
+.section__partners {
+  margin-top: 140px;
+  position: relative;
+}
+
+.section__partners .section__line {
+  position: absolute;
+  background-color: rgba(42, 42, 42, 0.1);
+  height: 2px;
+  left: 0;
+}
+
+.section__partners .section__line.line__bg {
+  top: 24px;
+  width: calc((100vw - 1472px) / 2 + 10px);
+}
+
+.section__partners .section__line.line__bg--bottom {
+  bottom: 54px;
+  left: 0;
+  width: 100vw;
+}
+
+.section__partners .section__partners--title {
+  background-color: #fff;
+  padding: 10px 6px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2A2A2A;
+  position: relative;
+  z-index: 2;
+}
+
+.section__partners .partner__list {
+  width: 1472px;
+  margin: 0 auto;
+  position: relative;
+  margin: 64px 0;
+}
+
+.section__partners .partner__list .partner__list--arrow {
+  position: absolute;
+  top: calc(50% - 23px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90px;
+  height: 90px;
+  top: calc(50% - 45px);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.section__partners .partner__list .partner__list--arrow.arrow__left {
+  right: calc(100% + 28px);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.section__partners .partner__list .partner__list--arrow.arrow__right {
+  left: calc(100% + 28px);
+}
+
+.section__partners .partner__list .partner__list--arrow:hover {
+  background-color: #0750e4;
+}
+
+.section__partners .partner__list .partner__list--arrow:hover svg path {
+  fill: #fff;
+}
+
+.section__partners .partner__list::before {
+  content: '';
+  background-color: #fff;
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: calc(100% - 20px);
+  z-index: 1;
+  border: 2px solid rgba(42, 42, 42, 0.1);
+}
+
+.section__partners .partner__list .partner__list--wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section__partners .partner__list .partner__list--wrapper .partner__list--item {
+  width: 214px;
+  height: 214px;
+  border: 2px solid rgba(42, 42, 42, 0.1);
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: url(../assets/exported_assets/icons/mc_default.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: background-image 0.1s ease-in-out;
+  transition: background-image 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.section__partners .partner__list .partner__list--wrapper .partner__list--item:hover {
+  background-image: url(../assets/exported_assets/icons/mc_hover.svg);
+}
+
+.section__partners .section__partners--secondary-title-box {
+  display: inline-block;
+  background-color: #fff;
+  padding: 6px;
+}
+
+.section__partners .section__partners--secondary-title-box .section__partners--secondary-title-part-one {
+  color: #949494;
+  font-size: 18px;
+}
+
+.section__partners .section__partners--secondary-title-box .section__partners--secondary-title-part-two {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3873e9;
+  margin-top: 20px;
+}
+
+.partner__section--asked-title-wrapper {
+  margin: 270px auto;
+  text-align: center;
+}
+
+.partner__section--asked-title-wrapper .partner__section--asked-title .partner__section--asked-title-href {
+  font-size: 45px;
+  color: #0750e4;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: 1px solid #0750e4;
+  text-decoration: none;
 }
 
 .section__projects--title {
