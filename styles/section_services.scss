@@ -58,7 +58,7 @@
     .services__list {
       display: flex;
       width: 100%;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       .services__list--item {
         height: $services_icon_box_size;
@@ -72,34 +72,53 @@
 
             border: $main_blue;
             transform: scale(1.2);
+            svg {
+              g {
+                fill: #fff;
+              }
+              path {
+                fill: #fff;
+              }
+            }
           }
         }
+
+        &.consulting.item__active,
         &.consulting:hover {
           .services__list--item-content {
-            background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+            background-image: url(../assets/exported_assets/icons/hover/consulting_icon_white.svg);
           }
         }
+
+        &.develope.item__active,
         &.develope:hover {
           .services__list--item-content {
             background-image: url(../assets/exported_assets/icons/hover/code.svg);
           }
         }
 
+        &.achitecture.item__active,
         &.achitecture:hover {
           .services__list--item-content {
             background-image: url(../assets/exported_assets/icons/hover/ruler-pencil.svg);
           }
         }
+
+        &.qa.item__active,
         &.qa:hover {
           .services__list--item-content {
             background-image: url(../assets/exported_assets/icons/hover/badge.svg);
           }
         }
+
+        &.audit.item__active,
         &.audit:hover {
           .services__list--item-content {
             background-image: url(../assets/exported_assets/icons/hover/icon_audit.svg);
           }
         }
+
+        &.launch.item__active,
         &.launch:hover {
           .services__list--item-content {
             background-image: url(../assets/exported_assets/icons/hover/rocket.svg);
@@ -108,7 +127,7 @@
 
         &.consulting {
           .services__list--item-content {
-            background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+            background-image: url(../assets/exported_assets/icons/consulting_icon.svg);
           }
         }
         &.develope {
@@ -176,11 +195,14 @@
 
   .service__container {
     position: absolute;
-    display: flex;
+    display: none;
     height: 460px;
     overflow: hidden;
     width: 100%;
     top: 186px;
+    &.active {
+      display: flex;
+    }
     .service__description {
       width: calc(100% - 730px);
       height: 100%;
@@ -322,7 +344,7 @@
     color: $main_blue;
     padding-bottom: 36px;
     position: relative;
-    padding:20px 50px 40px 50px;
+    padding: 20px 50px 40px 50px;
 
     .quotes {
       position: absolute;

@@ -1,5 +1,9 @@
 @import 'variables';
 
+.section__projects {
+  padding-top: 100px;
+}
+
 .section__projects--title {
   display: block;
   text-align: center;
@@ -84,7 +88,17 @@
 }
 
 .project__details--box {
-  display: grid;
+  display: none;
+  &.active {
+    display: grid;
+  }
+  .project__details{
+    .project__details--img{
+      img {
+        max-width: 100%;
+      }
+    }
+  }
   grid-template-columns: 1fr 1fr;
   gap: 46px;
 }

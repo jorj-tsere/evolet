@@ -157,7 +157,6 @@ html {
 }
 
 .section__container {
-  width: 1472px;
   margin: 0 auto;
   z-index: 2;
   position: relative;
@@ -276,8 +275,6 @@ section {
 }
 
 .section__home {
-  width: 100%;
-  max-width: 1472px;
   margin: 100px auto;
   position: relative;
 }
@@ -491,7 +488,7 @@ section {
 }
 
 .section__about {
-  padding-bottom: 218px;
+  padding: 136px 0 218px;
   margin-top: 138px;
   margin: 0 auto;
   position: relative;
@@ -504,7 +501,7 @@ section {
   background: rgba(7, 80, 228, 0.3);
   position: absolute;
   left: 0;
-  top: 20px;
+  top: 155px;
   width: calc((100vw - 1472px) / 2 - 30px);
 }
 
@@ -524,7 +521,7 @@ section {
   display: block;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 30px;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -726,8 +723,9 @@ section {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -746,32 +744,40 @@ section {
           transform: scale(1.2);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.consulting:hover .services__list--item-content {
-  background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+.services_content_wrapper .services__navigation .services__list .services__list--item:hover .services__list--item-content svg g, .services_content_wrapper .services__navigation .services__list .services__list--item.item__active .services__list--item-content svg g {
+  fill: #fff;
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.develope:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item:hover .services__list--item-content svg path, .services_content_wrapper .services__navigation .services__list .services__list--item.item__active .services__list--item-content svg path {
+  fill: #fff;
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.consulting.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.consulting:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/consulting_icon_white.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.develope.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.develope:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/code.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.achitecture:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.achitecture.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.achitecture:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/ruler-pencil.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.qa:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.qa.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.qa:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/badge.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.audit:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.audit.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.audit:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/icon_audit.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.launch:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.launch.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.launch:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/rocket.svg);
 }
 
 .services_content_wrapper .services__navigation .services__list .services__list--item.consulting .services__list--item-content {
-  background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+  background-image: url(../assets/exported_assets/icons/consulting_icon.svg);
 }
 
 .services_content_wrapper .services__navigation .services__list .services__list--item.develope .services__list--item-content {
@@ -840,13 +846,17 @@ section {
 
 .services_content_wrapper .service__container {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   height: 460px;
   overflow: hidden;
   width: 100%;
   top: 186px;
+}
+
+.services_content_wrapper .service__container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .services_content_wrapper .service__container .service__description {
@@ -1112,13 +1122,13 @@ section {
 }
 
 .section__partners .partner__list .partner__list--arrow.arrow__left {
-  right: calc(100% + 28px);
+  right: calc(100% + 6px);
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
 .section__partners .partner__list .partner__list--arrow.arrow__right {
-  left: calc(100% + 28px);
+  left: calc(100% + 6px);
 }
 
 .section__partners .partner__list .partner__list--arrow:hover {
@@ -1201,6 +1211,10 @@ section {
   display: inline-block;
   border-bottom: 1px solid #0750e4;
   text-decoration: none;
+}
+
+.section__projects {
+  padding-top: 100px;
 }
 
 .section__projects--title {
@@ -1299,11 +1313,19 @@ section {
 }
 
 .project__details--box {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 46px;
+}
+
+.project__details--box.active {
+  display: -ms-grid;
+  display: grid;
+}
+
+.project__details--box .project__details .project__details--img img {
+  max-width: 100%;
 }
 
 .project__details--description .project__details--description-title {

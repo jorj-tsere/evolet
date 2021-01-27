@@ -1,15 +1,15 @@
 @import 'variables';
 .section__about {
-padding-bottom: 218px;
+  padding: 136px 0 218px;
   .pseudo_line_bg{
     height: 2px;
     background:  rgba(7,80,228,.3);
     position: absolute;
     left:0;
-    top: 20px;
+    top: 155px;
     width: calc((100vw - 1472px) / 2 - 30px);
     .pseudo_line_rounded-bullet {
-      width: 8px;
+      width: 8px; 
       height: 8px;
       background-color: #fff;
       border: 2px solid rgba(7,80,228,.3);
@@ -31,7 +31,7 @@ padding-bottom: 218px;
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 30px;
     width: 100%;
     height: 100%;
     z-index: 1;

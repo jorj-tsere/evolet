@@ -67,8 +67,9 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -87,32 +88,40 @@
           transform: scale(1.2);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.consulting:hover .services__list--item-content {
-  background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+.services_content_wrapper .services__navigation .services__list .services__list--item:hover .services__list--item-content svg g, .services_content_wrapper .services__navigation .services__list .services__list--item.item__active .services__list--item-content svg g {
+  fill: #fff;
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.develope:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item:hover .services__list--item-content svg path, .services_content_wrapper .services__navigation .services__list .services__list--item.item__active .services__list--item-content svg path {
+  fill: #fff;
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.consulting.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.consulting:hover .services__list--item-content {
+  background-image: url(../assets/exported_assets/icons/hover/consulting_icon_white.svg);
+}
+
+.services_content_wrapper .services__navigation .services__list .services__list--item.develope.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.develope:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/code.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.achitecture:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.achitecture.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.achitecture:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/ruler-pencil.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.qa:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.qa.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.qa:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/badge.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.audit:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.audit.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.audit:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/icon_audit.svg);
 }
 
-.services_content_wrapper .services__navigation .services__list .services__list--item.launch:hover .services__list--item-content {
+.services_content_wrapper .services__navigation .services__list .services__list--item.launch.item__active .services__list--item-content, .services_content_wrapper .services__navigation .services__list .services__list--item.launch:hover .services__list--item-content {
   background-image: url(../assets/exported_assets/icons/hover/rocket.svg);
 }
 
 .services_content_wrapper .services__navigation .services__list .services__list--item.consulting .services__list--item-content {
-  background-image: url(../assets/exported_assets/icons/consulting_icon_white.svg);
+  background-image: url(../assets/exported_assets/icons/consulting_icon.svg);
 }
 
 .services_content_wrapper .services__navigation .services__list .services__list--item.develope .services__list--item-content {
@@ -181,13 +190,17 @@
 
 .services_content_wrapper .service__container {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   height: 460px;
   overflow: hidden;
   width: 100%;
   top: 186px;
+}
+
+.services_content_wrapper .service__container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .services_content_wrapper .service__container .service__description {

@@ -4,19 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EvoletNY</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <script src="assets/lib/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="./minified-css/main.min.css" />
     <link
       rel="icon"
       href="./assets/Logo/Favicon/favicon_Blue_transparent.ico"
     />
-
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
-
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      type="text/css"
+      href="./assets/lib/swiper-bundle.min.css"
     />
-
+    <link rel="stylesheet" href="./minified-css/responsive.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -36,13 +35,13 @@
               <li class="header__item" target-section="services">
                 <div class="header__item--content">services</div>
               </li>
-              <li class="header__item" target-section="services">
+              <li class="header__item" target-section="projects">
                 <div class="header__item--content">projects</div>
               </li>
-              <li class="header__item" target-section="services">
+              <li class="header__item" target-section="about">
                 <div class="header__item--content">about</div>
               </li>
-              <li class="header__item" target-section="services">
+              <li class="header__item" target-section="contact">
                 <div class="header__item--content contact">contact</div>
               </li>
             </ul>
@@ -50,7 +49,8 @@
           <div class="header__menu--sm flex-item"></div>
         </header>
       </div>
-      <div class="section__home">
+      <!-- <div class="section__container"></div> -->
+      <div class="section__container section__home">
         <p class="section__title">
           Helping Businesses Reach Their Goals Through Expert Software Solutions
         </p>
@@ -85,7 +85,7 @@
     </section>
     <!-- MAIN SECTION ENDS -->
     <!-- SECOND ABOUT STARTS -->
-    <section class="section section__about">
+    <section class="section section__about" id="about">
       <div class="pseudo_line_bg">
         <span class="pseudo_line_rounded-bullet"></span>
       </div>
@@ -146,7 +146,7 @@
       </div>
     </section>
     <!-- SECOND UNDER ABOUT ENDS -->
-    <section class="section section__services">
+    <section class="section section__services" id="services">
       <h2 class="section__services--title">
         <span class="section__services--title-bg">
           <span class="title__backgroundg--rounded-bullet"></span>
@@ -158,48 +158,80 @@
         <div class="section__container">
           <nav class="services__navigation">
             <ul class="services__list">
-              <li class="services__list--item item__active consulting">
+              <li
+                target-block="service__container--consulting"
+                class="services__list--item item__active consulting"
+              >
                 <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">consulting</div>
               </li>
-              <li class="services__list--item develope">
+              <li
+                target-block="service__container--develope"
+                class="services__list--item develope"
+              >
                 <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">Developing Software</div>
               </li>
-              <li class="services__list--item achitecture">
+              <li
+                target-block="service__container--achitecture"
+                class="services__list--item achitecture"
+              >
                 <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">
                   Constructing Architecture
                 </div>
               </li>
-              <li class="services__list--item qa">
+              <li
+                target-block="service__container--qa"
+                class="services__list--item qa"
+              >
                 <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">
                   Software Quality Assurance
                 </div>
               </li>
-              <li class="services__list--item launch">
+              <li
+                target-block="service__container--lunch"
+                class="services__list--item launch"
+              >
                 <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">Product launch</div>
               </li>
-              <li class="services__list--item audit">
+              <li
+                target-block="service__container--audit"
+                class="services__list--item audit"
+              >
                 <div class="services__list--item-content"></div>
                 <div class="services__list--item-txt">Audit</div>
               </li>
             </ul>
           </nav>
-          <div class="service__container">
+          <div
+            class="service__container active"
+            id="service__container--consulting"
+          >
             <article class="service__description">
-              <h3
-                class="service__description--title"
-                id="service_description_title"
-              >
-                Developing Software
-              </h3>
-              <p
-                class="service__description--content"
-                id="service_description_content"
-              >
+              <h3 class="service__description--title">Consulting</h3>
+              <p class="service__description--content">
+                We offer businesses highly valued IT consulting to enable you
+                and your business high-level growth, scalability, and
+                profitability through optimal IT solutions. Custom and
+                personalized solutions to suit your specific needs and queries –
+                ultimately bringing you the vision you want, to life.
+              </p>
+            </article>
+            <div class="service__img">
+              <img
+                src="./assets/exported_assets/expertise_photos/consulting.png"
+                alt="service_image"
+                class="service__img--source"
+              />
+            </div>
+          </div>
+          <div class="service__container" id="service__container--develope">
+            <article class="service__description">
+              <h3 class="service__description--title">Developing Software</h3>
+              <p class="service__description--content">
                 We continue to reimagine what innovation in the tech economy
                 means, which is why we continuously offer our partners only
                 cutting-edge software engineering. Working with your demands and
@@ -210,8 +242,93 @@
             </article>
             <div class="service__img">
               <img
-                src="./assets/exported_assets/expertise_photos/Rectangle.png"
-                alt=""
+                src="./assets/exported_assets/expertise_photos/develope.png"
+                alt="service_image"
+                class="service__img--source"
+              />
+            </div>
+          </div>
+          <div class="service__container" id="service__container--achitecture">
+            <article class="service__description">
+              <h3 class="service__description--title">
+                Constructing Architecture
+              </h3>
+              <p class="service__description--content">
+                To disrupt and show innovation in today’s digital economy,
+                focusing on having well-designed and highly functioning software
+                is vital. Evolet can help you with exactly that! We’ll dedicate
+                our powers and skills to understanding your exact insight to
+                then partner with you – ultimately finding the exact solution
+                for your business to reach the desired goals.
+              </p>
+            </article>
+            <div class="service__img">
+              <img
+                src="./assets/exported_assets/expertise_photos/architect.png"
+                alt="service_image"
+                class="service__img--source"
+              />
+            </div>
+          </div>
+
+          <div class="service__container" id="service__container--qa">
+            <article class="service__description">
+              <h3 class="service__description--title">
+                Software Quality Assurance
+              </h3>
+              <p class="service__description--content">
+                As SQA experts, we offer you comprehensive and in-detail
+                continuous monitoring and testing to ensure that your software
+                is up to your exact standards at all times. With us, you can
+                just sit back and focus on your own business, while we’ll handle
+                all the testing–bringing you an optimal software experience at
+                all times.
+              </p>
+            </article>
+            <div class="service__img">
+              <img
+                src="./assets/exported_assets/expertise_photos/software_quality.png"
+                alt="service_image"
+                class="service__img--source"
+              />
+            </div>
+          </div>
+
+          <div class="service__container" id="service__container--lunch">
+            <article class="service__description">
+              <h3 class="service__description--title">Product launch</h3>
+              <p class="service__description--content">
+                Launching a product with us will be smooth sailing and
+                quality-driven. As personalization is our bread and butter, we
+                constantly aim at tailoring the launch and the goal achievements
+                to your exact requirements. Ultimately bringing the best
+                experience to you and your users.
+              </p>
+            </article>
+            <div class="service__img">
+              <img
+                src="./assets/exported_assets/expertise_photos/product_lunch.png"
+                alt="service_image"
+                class="service__img--source"
+              />
+            </div>
+          </div>
+
+          <div class="service__container" id="service__container--audit">
+            <article class="service__description">
+              <h3 class="service__description--title">Audit</h3>
+              <p class="service__description--content">
+                With our precision and eye for detail, no nook or cranny will be
+                left out of our peripheral. Providing impeccable auditing
+                services to ensure all assessments cover everything from A to Z.
+                This way your IT qualms will be eradicated before they even
+                surface.
+              </p>
+            </article>
+            <div class="service__img">
+              <img
+                src="./assets/exported_assets/expertise_photos/audit.png"
+                alt="service_image"
                 class="service__img--source"
               />
             </div>
@@ -325,17 +442,17 @@
           </h3>
         </div>
       </div>
+
+      <div class="partner__section--asked-title-wrapper">
+        <h4 class="partner__section--asked-title">
+          <a href="#" class="partner__section--asked-title-href">
+            Want To Partner With Us?
+          </a>
+        </h4>
+      </div>
     </section>
 
-    <div class="partner__section--asked-title-wrapper">
-      <h4 class="partner__section--asked-title">
-        <a href="#" class="partner__section--asked-title-href">
-          Want To Partner With Us?
-        </a>
-      </h4>
-    </div>
-
-    <section class="section section__projects">
+    <section class="section section__projects" id="projects">
       <h2 class="section__services--title">
         <span class="section__services--title-bg">
           <span class="title__backgroundg--rounded-bullet"></span>
@@ -345,13 +462,19 @@
 
       <nav class="projects">
         <ul class="projects__lists">
-          <li class="project_item active">FinTech</li>
-          <li class="project_item">Gambling</li>
-          <li class="project_item">Telecommunications</li>
-          <li class="project_item">Other</li>
+          <li target-block="FinTech__content" class="project_item active">
+            FinTech
+          </li>
+          <li target-block="Gambling__content" class="project_item">
+            Gambling
+          </li>
+          <li target-block="Telecommunications__content" class="project_item">
+            Telecommunications
+          </li>
+          <li target-block="Other__content" class="project_item">Other</li>
         </ul>
       </nav>
-      <div class="project__details--box">
+      <div id="FinTech__content" class="project__details--box active">
         <div class="project__details">
           <div class="project__details--img">
             <img
@@ -402,9 +525,117 @@
           </nav>
         </div>
       </div>
+      <div id="Gambling__content" class="project__details--box">
+        <div class="project__details">
+          <div class="project__details--img">
+            <img
+              src="./assets/exported_assets/projects_photos/gambling_bg.png"
+              alt="fintech"
+            />
+          </div>
+        </div>
+        <div class="project__details--description">
+          <h3 class="project__details--description-title">
+            Novel solutions for Gambling. Offering vast solutions to reaching
+            maximum customer attraction and retention with simple full-proof
+            assistance.
+          </h3>
+          <nav class="project__details--description-list-nav">
+            <ul class="project__details--description-list">
+              <li class="project__details--description-list-item">
+                Online Betting Portal
+              </li>
+              <li class="project__details--description-list-item">
+                Totalizator Betting Core System
+              </li>
+              <li class="project__details--description-list-item">
+                Online Games
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="Telecommunications__content" class="project__details--box">
+        <div class="project__details">
+          <div class="project__details--img">
+            <img
+              src="./assets/exported_assets/projects_photos/Telecommunications_pg.png"
+              alt="fintech"
+            />
+          </div>
+        </div>
+        <div class="project__details--description">
+          <h3 class="project__details--description-title">
+            Finding modern solutions to modern-day needs by assisting mobile and
+            internet providers to create innovative systems to scale their
+            business better.
+          </h3>
+          <nav class="project__details--description-list-nav">
+            <ul class="project__details--description-list">
+              <li class="project__details--description-list-item">
+                Billing System For Mobile Service Providers
+              </li>
+              <li class="project__details--description-list-item">
+                Billing System For Internet Service Providers
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div id="Other__content" class="project__details--box">
+        <div class="project__details">
+          <div class="project__details--img">
+            <img
+              src="./assets/exported_assets/projects_photos/other_bg.png"
+              alt="other_bg"
+            />
+          </div>
+        </div>
+        <div class="project__details--description">
+          <h3 class="project__details--description-title">
+            Modernizing IT solutions to a multitude of industries to showcase
+            growth, scalability and reliability
+          </h3>
+          <nav class="project__details--description-list-nav">
+            <ul class="project__details--description-list">
+              <li class="project__details--description-list-item">
+                Core Management System Of Insurance Companies
+              </li>
+              <li class="project__details--description-list-item">
+                Core Management System Of The Hospital
+              </li>
+              <li class="project__details--description-list-item">
+                Core System For Managing And Monitoring Observations Regarding
+                Elections
+              </li>
+              <li class="project__details--description-list-item">
+                Complete HR Management System
+              </li>
+              <li class="project__details--description-list-item">
+                Digital Document Library
+              </li>
+              <li class="project__details--description-list-item">
+                Online Examination Systems
+              </li>
+              <li class="project__details--description-list-item">
+                Online Training Systems
+              </li>
+              <li class="project__details--description-list-item">
+                Online Loans P2P System
+              </li>
+              <li class="project__details--description-list-item">
+                Online Book Authorization Distribution Protection System
+              </li>
+              <li class="project__details--description-list-item">
+                Big Data Automated Analysis And Processing Systems
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </section>
 
-    <section class="section section__footer">
+    <section class="section section__footer" id="contact">
       <div class="section__container">
         <form action="/" method="" class="contact__form">
           <div class="section__socials">
@@ -440,9 +671,7 @@
                 />
               </div>
               <div class="contact__form--grid--textarea">
-                <div id="commet_body" contenteditable>
-                  Text Here
-                </div>
+                <div id="commet_body" contenteditable>Text Here</div>
               </div>
               <div class="contact__form--grid-submit-wrapper">
                 <button
@@ -456,14 +685,17 @@
           </div>
         </form>
         <div class="copyright">
-            <div class="copyright__brand">
-                <img src="./assets/Logo/SVG/Evolet_Logo_gray.svg" alt="brand">
-            </div>
-            <div class="copyright__content">&#169; Evolet - All Rights Reserved</div>
-            <div class="copyright__policy">Privacy Policy</div>
+          <div class="copyright__brand">
+            <img src="./assets/Logo/SVG/Evolet_Logo_gray.svg" alt="brand" />
+          </div>
+          <div class="copyright__content">
+            &#169; Evolet - All Rights Reserved
+          </div>
+          <div class="copyright__policy">Privacy Policy</div>
         </div>
       </div>
     </section>
+
     <div class="swiper-container" style="height: 400px; text-align: center">
       <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">
@@ -503,6 +735,83 @@
         pagination: {
           el: '.swiper-pagination',
         },
+      });
+
+      function services_tab(ev) {
+        const next_active_tab_name = $(ev.currentTarget).attr('target-block');
+
+        let tabs = $('.services__list--item.item__active');
+        let current_active_tab = tabs[0] || null;
+        if (!current_active_tab) {
+          console.error('error: no active tab detected');
+          return;
+        }
+        const current_active_tab_name = $(current_active_tab).attr(
+          'target-block'
+        );
+        if (next_active_tab_name === current_active_tab_name) {
+          return;
+        }
+
+        $('.services__list--item').removeClass('item__active');
+        $(ev.currentTarget).addClass('item__active');
+
+        $.when($('.service__container').fadeOut(200)).done(function () {
+          $('.service__container').removeClass('active');
+          $('#' + next_active_tab_name)
+            .addClass('active')
+            .fadeIn(100);
+        });
+      }
+
+      function projects_tab(ev) {
+        const next_active_tab_name = $(ev.currentTarget).attr('target-block');
+
+        let tabs = $('.project_item.active');
+        let current_active_tab = tabs[0] || null;
+        if (!current_active_tab) {
+          console.error('error: no active tab detected');
+          return;
+        }
+        const current_active_tab_name = $(current_active_tab).attr(
+          'target-block'
+        );
+        if (next_active_tab_name === current_active_tab_name) {
+          return;
+        }
+
+        $('.project_item').removeClass('active');
+        $(ev.currentTarget).addClass('active');
+
+        $.when($('.project__details--box').fadeOut(200)).done(function () {
+          $('.project__details--box').removeClass('active');
+          $('#' + next_active_tab_name)
+            .addClass('active')
+            .fadeIn(100);
+        });
+      }
+
+      function scroll_to(hash, timing = 1000) {
+        $('html, body').animate(
+          {
+            scrollTop: $('#' + hash).offset().top,
+          },
+          timing,
+          'swing'
+        );
+      }
+
+      $(document).ready(function () {
+        //
+        $('.services__list--item').on('click', services_tab);
+
+        $('.project_item').on('click', projects_tab);
+
+        // Add smooth scrolling to all links
+        $('.header__item').on('click', function (event) {
+          const _hash = $(event.currentTarget).attr('target-section');
+          scroll_to(_hash);
+        });
       });
     </script>
   </body>

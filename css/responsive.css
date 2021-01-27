@@ -42,11 +42,25 @@
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   /* Styles */
+  .section__container {
+    width: 1052px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1500px) {
+  /* Styles */
+  .section__container {
+    width: 1052px;
+  }
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
   /* Styles */
+  .section__container {
+    width: 1472px;
+  }
 }
 
 /* iPhone 4 ----------- */

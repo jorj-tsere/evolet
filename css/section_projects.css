@@ -1,3 +1,7 @@
+.section__projects {
+  padding-top: 100px;
+}
+
 .section__projects--title {
   display: block;
   text-align: center;
@@ -94,11 +98,19 @@
 }
 
 .project__details--box {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 46px;
+}
+
+.project__details--box.active {
+  display: -ms-grid;
+  display: grid;
+}
+
+.project__details--box .project__details .project__details--img img {
+  max-width: 100%;
 }
 
 .project__details--description .project__details--description-title {

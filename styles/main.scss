@@ -6,6 +6,7 @@ body,
 html {
   font-family: 'Montserrat';
   padding-bottom: 300px;
+  // scroll-behavior: smooth;
 }
 
 .standart-btn {
@@ -20,11 +21,13 @@ html {
 
 .section__container {
   // max-width: $content_max_width_xlg;
-  width: $content_max_width_xlg;
+ 
   margin: 0 auto;
   z-index: 2;
   position: relative;
 }
+
+
 
 section {
   width: 100%;

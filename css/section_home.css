@@ -103,8 +103,6 @@
 }
 
 .section__home {
-  width: 100%;
-  max-width: 1472px;
   margin: 100px auto;
   position: relative;
 }
