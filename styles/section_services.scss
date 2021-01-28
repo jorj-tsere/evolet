@@ -381,22 +381,26 @@
     color: $main_blue;
     position: relative;
     padding: 20px 20px 36px;
+    max-width: 98%;
+    margin: 0 auto;
 
     .quotes {
       position: absolute;
       width: 86px;
       height: 86px;
       &.quotes_start {
-        bottom: 100%;
+        bottom: 60%;
         right: 95%;
         background: url(../assets/exported_assets/icons/quotes_start.svg)
           no-repeat center center;
+        background-size: contain;
       }
       &.quotes_end {
-        top: 100%;
+        top: 60%;
         left: 95%;
         background: url(../assets/exported_assets/icons/quoutes_end.svg)
           no-repeat center center;
+        background-size: contain;
       }
     }
   }

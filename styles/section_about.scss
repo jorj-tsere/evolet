@@ -6,7 +6,7 @@
     background:  rgba(7,80,228,.3);
     position: absolute;
     left:0;
-    top: 155px;
+    top: 160px;
     width: calc((100vw - 1472px) / 2 - 30px);
     .pseudo_line_rounded-bullet {
       width: 8px; 
@@ -18,6 +18,38 @@
       top: -3px;
       border-radius: 50%;
     }
+  }
+
+
+  .pseudo_line_mobile{
+    height: 2px;
+    background:  rgba(7,80,228,.3);
+    width: 40%;
+    margin: 10px auto 30px;
+    position: relative;
+
+    .rounded-bullet{
+      width: 8px; 
+      height: 8px;
+      background-color: #fff;
+      border: 2px solid rgba(7,80,228,.3);
+      position: absolute;
+      top: -3px;
+      border-radius: 50%;
+      &.left{
+        left:0;
+      }
+      &.right{
+        right:0;
+      }
+    }
+
+    // &::before {
+    //   right:100%;
+    // }
+    // &::after {
+    //   left:100%;
+    // }
   }
 
   margin-top: 138px;

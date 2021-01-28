@@ -12,7 +12,7 @@
   background: rgba(7, 80, 228, 0.3);
   position: absolute;
   left: 0;
-  top: 155px;
+  top: 160px;
   width: calc((100vw - 1472px) / 2 - 30px);
 }
 
@@ -25,6 +25,32 @@
   left: 100%;
   top: -3px;
   border-radius: 50%;
+}
+
+.section__about .pseudo_line_mobile {
+  height: 2px;
+  background: rgba(7, 80, 228, 0.3);
+  width: 40%;
+  margin: 10px auto 30px;
+  position: relative;
+}
+
+.section__about .pseudo_line_mobile .rounded-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border: 2px solid rgba(7, 80, 228, 0.3);
+  position: absolute;
+  top: -3px;
+  border-radius: 50%;
+}
+
+.section__about .pseudo_line_mobile .rounded-bullet.left {
+  left: 0;
+}
+
+.section__about .pseudo_line_mobile .rounded-bullet.right {
+  right: 0;
 }
 
 .section__about::before {

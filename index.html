@@ -46,9 +46,33 @@
               </li>
             </ul>
           </nav>
-          <div class="header__menu--sm flex-item"></div>
+          <div class="header__menu--sm flex-item">
+            <div class="stage">
+              <div class="b-container">
+                <div class="line-top"></div>
+                <div class="line-middle"></div>
+                <div class="line-bottom"></div>
+              </div>
+            </div>
+          </div>
         </header>
       </div>
+      
+      <div class="burger_menu_tabs close">
+        <div class="burger_menu--tab-item">
+          Services
+        </div>
+        <div class="burger_menu--tab-item">
+          Projects
+        </div>
+        <div class="burger_menu--tab-item">
+          about
+        </div>
+        <div class="burger_menu--tab-item">
+          Contact
+        </div>
+      </div>  
+
       <!-- <div class="section__container"></div> -->
       <div class="section__container section__home">
         <p class="section__title">
@@ -57,6 +81,12 @@
         <p class="section__title--sm">
           We’ll Help You Reach Your Best Business Potential
         </p>
+        <button
+          class="mobile-view standart-btn mobile__section_action"
+          type="button"
+        >
+          Get In Touch To See How We Can Reach Your Goals
+        </button>
         <div class="section__socials">
           <a href="#in_link" class="section__socials--icon social_in"></a>
           <a href="#fb_link" class="section__socials--icon social_fb"></a>
@@ -65,10 +95,12 @@
       </div>
       <div class="section__action">
         <div class="section__action--content">
-          <div class="section__action--content--inner">
+          <div class="section__action--content--inner" target-section="contact">
             <div class="section__action--title">
               <div class="section__action--title-bg"></div>
+         
               <div>Get In Touch To See How We Can Reach Your Goals</div>
+
               <img
                 src="assets/exported_assets/icons/arrow_white.svg"
                 alt="arrow icon"
@@ -98,6 +130,13 @@
           Innovative Solutions
         </h3>
 
+        <div class="mobile-view mt-10 mb-20 text-center">
+          <!-- <div class="pseudo_line_mobile">
+            <span class="rounded-bullet left"></span>
+            <span class="rounded-bullet right"></span>
+          </div> -->
+        </div>
+
         <h2 class="section__two--primery-title">Why Do Businesses Trust Us?</h2>
 
         <article class="section__two--txt-content">
@@ -123,7 +162,9 @@
           Ready to reach your best potential with our IT solutions?
         </h4>
 
-        <button class="standart-btn">HIRE US</button>
+        <div class="standart__btn-wrapper hire_us">
+          <button class="standart-btn">HIRE US</button>
+        </div>
       </div>
     </section>
     <!-- SECOND ABOUT ENDS -->
@@ -962,12 +1003,25 @@
         $('.project_item').on('click', projects_tab);
 
         // Add smooth scrolling to all links
-        $('.header__item, .scroller.visible').on('click', function (event) {
+        $(
+          '.header__item, .scroller.visible, .section__action--content--inner'
+        ).on('click', function (event) {
           const _hash = $(event.currentTarget).attr('target-section');
           scroll_to(_hash);
         });
 
         $(document).on('scroll', handle_scroll);
+
+        $('.b-container').on('click', function () {
+          var that = $(this);
+          if (that.hasClass('is-open')) {
+            that.removeClass('is-open').addClass('is-closed');
+          } else {
+            that.removeClass('is-closed').addClass('is-open');
+          }
+          $('.burger_menu_tabs').toggleClass('open');
+          $('.burger_menu_tabs').toggleClass('close');
+        });
       });
     </script>
   </body>

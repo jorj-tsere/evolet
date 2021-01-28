@@ -146,12 +146,19 @@
   }
 }
 
+.mobile__section_action{
+  padding: 16px 10px;
+  border-radius: 5px;
+  line-height: $standart_line_height;
+}
+
 .section__action {
   position: relative;
   .section__action--content {
     height: 96px;
     width: 100%;
     .section__action--content--inner {
+      cursor: pointer;
       width: 100%;
       height: 100%;
       max-width: $content_max_width_xlg;
@@ -262,3 +269,4 @@
     }
   }
 }
+

@@ -16,7 +16,7 @@
     &.idiom__txt--part-two {
       display: flex;
       justify-content: flex-end;
-      line-height: $standart_line_height * 1.6;
+      line-height: $standart_line_height;
     }
   }
 }
@@ -25,6 +25,7 @@
   font-size: $h3_fs;
   font-weight: bold;
   color: $txt_color;
+  line-height: $standart_line_height;
   text-transform: capitalize;
   text-align: center;
 }

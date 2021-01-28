@@ -27,13 +27,14 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  line-height: 2.56;
+  line-height: 1.6;
 }
 
 .under_about--title {
   font-size: 45px;
   font-weight: bold;
   color: #2A2A2A;
+  line-height: 1.6;
   text-transform: capitalize;
   text-align: center;
 }
