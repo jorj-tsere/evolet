@@ -57,21 +57,19 @@
           </div>
         </header>
       </div>
-      
+
       <div class="burger_menu_tabs close">
-        <div class="burger_menu--tab-item">
+        <div class="burger_menu--tab-item" target-section="services">
           Services
         </div>
-        <div class="burger_menu--tab-item">
+        <div class="burger_menu--tab-item" target-section="projects">
           Projects
         </div>
-        <div class="burger_menu--tab-item">
-          about
-        </div>
-        <div class="burger_menu--tab-item">
+        <div class="burger_menu--tab-item" target-section="about">about</div>
+        <div class="burger_menu--tab-item" target-section="contact">
           Contact
         </div>
-      </div>  
+      </div>
 
       <!-- <div class="section__container"></div> -->
       <div class="section__container section__home">
@@ -98,7 +96,7 @@
           <div class="section__action--content--inner" target-section="contact">
             <div class="section__action--title">
               <div class="section__action--title-bg"></div>
-         
+
               <div>Get In Touch To See How We Can Reach Your Goals</div>
 
               <img
@@ -1011,6 +1009,15 @@
         });
 
         $(document).on('scroll', handle_scroll);
+
+        $('.burger_menu--tab-item').on('click', function (event) {
+          $('.burger_menu_tabs').toggleClass('open');
+          $('.burger_menu_tabs').toggleClass('close');
+          setTimeout(() => {
+            const _hash = $(event.currentTarget).attr('target-section');
+            scroll_to(_hash);
+          }, 400);
+        });
 
         $('.b-container').on('click', function () {
           var that = $(this);
