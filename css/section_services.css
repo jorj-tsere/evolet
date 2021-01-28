@@ -1,3 +1,59 @@
+.h1_fs {
+  font-size: 60px;
+}
+
+.h2_fs, .services_content_wrapper .service__container .service__description .service__description--title, .services_content_wrapper .swiper-slide .service__container .service__description .service__description--title, .section__services .section__container .services--title {
+  font-size: 50px;
+}
+
+.h3_fs {
+  font-size: 60px;
+}
+
+.h4_fs {
+  font-size: 45px;
+}
+
+.h5_fs, .section__services--title .section__services--title-txt {
+  font-size: 30px;
+}
+
+.h6_fs, .section__services .section__container.part_three .inner__section--container .inner__section--container-content {
+  font-size: 25px;
+}
+
+.h7_fs, .idiom__result--driven .idiom__answer {
+  font-size: 20px;
+}
+
+.h8_fs, .services_content_wrapper .services__navigation .services__list .services__list--item .services__list--item-txt {
+  font-size: 18px;
+}
+
+.h9_fs, .services_content_wrapper .service__container .service__description .service__description--content, .services_content_wrapper .swiper-slide .service__container .service__description .service__description--content {
+  font-size: 16px;
+}
+
+.h10_fs {
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-rigth {
+  text-align: right;
+}
+
+.p-relative {
+  position: relative;
+}
+
 .section__services {
   padding-top: 100px;
 }
@@ -13,7 +69,6 @@
   height: 30px;
   text-transform: capitalize;
   color: #949494;
-  font-size: 30px;
   font-weight: 700;
   background-color: #fff;
   line-height: 30px;
@@ -184,7 +239,6 @@
   text-align: center;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -195,21 +249,17 @@
   overflow: hidden;
   width: 100%;
   top: 186px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .services_content_wrapper .service__container.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.services_content_wrapper .service__container .service__description {
-  width: calc(100% - 730px);
-  height: 100%;
+  display: -ms-grid;
+  display: grid;
 }
 
 .services_content_wrapper .service__container .service__description .service__description--title {
-  font-size: 50px;
   font-weight: bold;
   color: #0750e4;
   padding-bottom: 34px;
@@ -217,27 +267,68 @@
 
 .services_content_wrapper .service__container .service__description .service__description--content {
   line-height: 1.6;
-  font-size: 16px;
   color: #545454;
-  width: 604px;
 }
 
 .services_content_wrapper .service__container .service__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 728px;
-  height: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.services_content_wrapper .service__container .service__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.services_content_wrapper .swiper-slide .service__container {
+  position: static;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  top: 186px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 30px;
+  height: auto;
+}
+
+.services_content_wrapper .swiper-slide .service__container .service__description .service__description--title {
+  font-weight: bold;
+  color: #0750e4;
+  padding-bottom: 34px;
+}
+
+.services_content_wrapper .swiper-slide .service__container .service__description .service__description--content {
+  line-height: 1.6;
+  color: #545454;
+}
+
+.services_content_wrapper .swiper-slide .service__container .service__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.services_content_wrapper .swiper-slide .service__container .service__img img {
+  max-width: 100%;
+  height: auto;
 }
 
 .services_content_wrapper_bg {
   border: 2px solid rgba(42, 42, 42, 0.1);
   position: absolute;
   height: 100%;
-  width: calc((100vw - ((100vw - 1472px) / 2)) + 40px);
 }
 
 .services_content_wrapper_bg::after {
@@ -290,7 +381,6 @@
 }
 
 .section__services .section__container.part_three .inner__section--container .inner__section--container-content {
-  font-size: 25px;
   position: relative;
   color: #fff;
   width: 716px;
@@ -323,7 +413,6 @@
 
 .section__services .section__container .services--title {
   color: #3e3e3e;
-  font-size: 50px;
   font-weight: bold;
 }
 
@@ -363,10 +452,10 @@
 .idiom__result--driven .idiom__title {
   font-size: 40px;
   font-weight: bold;
+  text-align: center;
   color: #0750e4;
-  padding-bottom: 36px;
   position: relative;
-  padding: 20px 50px 40px 50px;
+  padding: 20px 20px 36px;
 }
 
 .idiom__result--driven .idiom__title .quotes {
@@ -377,19 +466,20 @@
 
 .idiom__result--driven .idiom__title .quotes.quotes_start {
   bottom: 100%;
-  right: 100%;
+  right: 95%;
   background: url(../assets/exported_assets/icons/quotes_start.svg) no-repeat center center;
 }
 
 .idiom__result--driven .idiom__title .quotes.quotes_end {
   top: 100%;
-  left: 100%;
+  left: 95%;
   background: url(../assets/exported_assets/icons/quoutes_end.svg) no-repeat center center;
 }
 
 .idiom__result--driven .idiom__answer {
-  font-size: 20px;
   color: #2A2A2A;
+  display: inline-block;
+  margin: 0 auto;
   position: relative;
 }
 

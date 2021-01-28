@@ -70,7 +70,7 @@
     justify-content: center;
     .project_item {
       padding: 4px 6px;
-      margin-left: 92px;
+      margin: 0 46px;
       font-size: $h5_fs;
       font-weight: bold;
       cursor: pointer;
@@ -92,8 +92,8 @@
   &.active {
     display: grid;
   }
-  .project__details{
-    .project__details--img{
+  .project__details {
+    .project__details--img {
       img {
         max-width: 100%;
       }
@@ -108,7 +108,7 @@
     font-size: 20px;
     color: #0750e4;
     line-height: $standart_line_height;
-    padding-bottom: 30px;
+    padding: 0 14px 30px 14px;
     font-weight: 700;
   }
   .project__details--description-list-nav {

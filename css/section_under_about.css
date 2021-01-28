@@ -14,8 +14,9 @@
   font-size: 50px;
   font-weight: 700;
   color: transparent;
+  stroke-width: 1px;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0750e4;
 }
 

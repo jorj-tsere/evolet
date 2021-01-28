@@ -32,7 +32,6 @@
 }
 
 .section__partners .partner__list {
-  width: 1472px;
   margin: 0 auto;
   position: relative;
   margin: 64px 0;
@@ -90,7 +89,12 @@
   border: 2px solid rgba(42, 42, 42, 0.1);
 }
 
-.section__partners .partner__list .partner__list--wrapper {
+.section__partners .partner__list .partner__list--wrapper-box {
+  width: 100%;
+  overflow: hidden;
+}
+
+.section__partners .partner__list .partner__list--wrapper-box .partner__list--wrapper {
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,9 +104,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 1472px;
 }
 
-.section__partners .partner__list .partner__list--wrapper .partner__list--item {
+.section__partners .partner__list .partner__list--wrapper-box .partner__list--wrapper .partner__list--item {
   width: 214px;
   height: 214px;
   border: 2px solid rgba(42, 42, 42, 0.1);
@@ -116,7 +121,7 @@
   cursor: pointer;
 }
 
-.section__partners .partner__list .partner__list--wrapper .partner__list--item:hover {
+.section__partners .partner__list .partner__list--wrapper-box .partner__list--wrapper .partner__list--item:hover {
   background-image: url(../assets/exported_assets/icons/mc_hover.svg);
 }
 

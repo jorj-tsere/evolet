@@ -1,3 +1,59 @@
+.h1_fs, .section__home .section__title {
+  font-size: 60px;
+}
+
+.h2_fs {
+  font-size: 50px;
+}
+
+.h3_fs {
+  font-size: 60px;
+}
+
+.h4_fs {
+  font-size: 45px;
+}
+
+.h5_fs, .section__home .section__title--sm {
+  font-size: 30px;
+}
+
+.h6_fs, .section__action .section__action--content .section__action--content--inner .section__action--title {
+  font-size: 25px;
+}
+
+.h7_fs {
+  font-size: 20px;
+}
+
+.h8_fs {
+  font-size: 18px;
+}
+
+.h9_fs {
+  font-size: 16px;
+}
+
+.h10_fs, .header .header__menu .header__item .header__item--content {
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-rigth {
+  text-align: right;
+}
+
+.p-relative {
+  position: relative;
+}
+
 .section__main {
   height: 100vh;
   position: relative;
@@ -18,7 +74,6 @@
   height: 100px;
   max-width: 1472px;
   margin: 0 auto;
-  padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +123,6 @@
 
 .header .header__menu .header__item .header__item--content {
   border-radius: 50%;
-  font-size: 14px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -103,12 +157,11 @@
 }
 
 .section__home {
-  margin: 100px auto;
+  margin: 100px auto 80px;
   position: relative;
 }
 
 .section__home .section__title {
-  font-size: 60px;
   font-weight: 700;
   line-height: 1.6;
   max-width: 1200px;
@@ -117,7 +170,6 @@
 
 .section__home .section__title--sm {
   padding-top: 1rem;
-  font-size: 30px;
   color: white;
 }
 
@@ -221,7 +273,6 @@
 }
 
 .section__action .section__action--content .section__action--content--inner .section__action--title {
-  font-size: 25px;
   color: white;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -298,12 +349,16 @@
           justify-content: center;
 }
 
-.scroller.scroller-section--main:hover {
+.scroller.scroller-section--main.visible {
+  cursor: pointer;
+}
+
+.scroller.scroller-section--main.visible:hover {
   background-color: #0750e4;
   height: 192px;
 }
 
-.scroller.scroller-section--main:hover .scroller__icon {
+.scroller.scroller-section--main.visible:hover .scroller__icon {
   background-image: url(../assets/exported_assets/icons/scroller_hover.svg);
 }
 

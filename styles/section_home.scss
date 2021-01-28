@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'ready-classes';
 
 .section__main {
   height: 100vh;
@@ -22,7 +23,7 @@
   height: $header_height;
   max-width: $content_max_width_xlg;
   margin: 0 auto;
-  padding: 0 15px;
+  // padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +50,7 @@
       cursor: pointer;
       .header__item--content {
         border-radius: 50%;
-        font-size: $h9_fs - 2;
+        @extend .h10_fs;
         justify-content: center;
         align-items: center;
         height: $header_menu_item_default_height;
@@ -83,11 +84,11 @@
 .section__home {
   // width: 100%;
   // max-width: $content_max_width_xlg;
-  margin: 100px auto;
+  margin: 100px auto 80px;
   position: relative;
 
   .section__title {
-    font-size: $h1_fs;
+    @extend .h1_fs;
     font-weight: 700;
     line-height: 1.6;
     max-width: 1200px;
@@ -95,7 +96,7 @@
   }
   .section__title--sm {
     padding-top: 1rem;
-    font-size: $h5_fs;
+    @extend .h5_fs;
     color: $white;
   }
 
@@ -180,7 +181,7 @@
         }
       }
       .section__action--title {
-        font-size: $h6_fs;
+        @extend .h6_fs;
         color: $white;
         display: inline-flex;
         position: relative;
@@ -242,7 +243,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    &:hover {
+    &.visible{
+       cursor: pointer; 
+    }
+    &.visible:hover {
       background-color: $main_blue;
       height: 192px;
       .scroller__icon {

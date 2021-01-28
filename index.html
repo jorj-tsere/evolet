@@ -22,7 +22,7 @@
     <!-- MAIN SECTION STARTS -->
     <section class="section section__main">
       <div class="head__wrapper">
-        <header class="header">
+        <header class="header section__container">
           <h1 class="brand flex-item">
             <img
               src="./assets/Logo/logo_with_text/White.png"
@@ -79,7 +79,10 @@
           <div class="section__action--bg"></div>
         </div>
       </div>
-      <div class="scroller scroller-section--main">
+      <div
+        class="scroller scroller-section--main visible"
+        target-section="about"
+      >
         <span class="scroller__icon"></span>
       </div>
     </section>
@@ -155,7 +158,7 @@
       </h2>
       <div class="services_content_wrapper">
         <div class="services_content_wrapper_bg"></div>
-        <div class="section__container">
+        <div class="section__container hide-sm">
           <nav class="services__navigation">
             <ul class="services__list">
               <li
@@ -206,6 +209,7 @@
               </li>
             </ul>
           </nav>
+
           <div
             class="service__container active"
             id="service__container--consulting"
@@ -334,6 +338,154 @@
             </div>
           </div>
         </div>
+        <div class="section__container mobile-view--wrapper">
+          <div
+            class="mobile-view services__touch--view"
+            style="text-align: center"
+          >
+            <div class="services__touch-pagination"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide Consulting">
+                <div class="service__container">
+                  <article class="service__description">
+                    <h3 class="service__description--title">Consulting</h3>
+                    <p class="service__description--content">
+                      We offer businesses highly valued IT consulting to enable
+                      you and your business high-level growth, scalability, and
+                      profitability through optimal IT solutions. Custom and
+                      personalized solutions to suit your specific needs and
+                      queries – ultimately bringing you the vision you want, to
+                      life.
+                    </p>
+                  </article>
+                  <div class="service__img">
+                    <img
+                      src="./assets/exported_assets/expertise_photos/consulting.png"
+                      alt="service_image"
+                      class="service__img--source"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide develope">
+                <div class="service__container">
+                  <article class="service__description">
+                    <h3 class="service__description--title">
+                      Developing Software
+                    </h3>
+                    <p class="service__description--content">
+                      We continue to reimagine what innovation in the tech
+                      economy means, which is why we continuously offer our
+                      partners only cutting-edge software engineering. Working
+                      with your demands and specific vision to produce an end
+                      result that will not only be exceeding your expectations
+                      but aiding your business in ultimate growth.
+                    </p>
+                  </article>
+                  <div class="service__img">
+                    <img
+                      src="./assets/exported_assets/expertise_photos/develope.png"
+                      alt="service_image"
+                      class="service__img--source"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide achitecture">
+                <div class="service__container">
+                  <article class="service__description">
+                    <h3 class="service__description--title">
+                      Constructing Architecture
+                    </h3>
+                    <p class="service__description--content">
+                      To disrupt and show innovation in today’s digital economy,
+                      focusing on having well-designed and highly functioning
+                      software is vital. Evolet can help you with exactly that!
+                      We’ll dedicate our powers and skills to understanding your
+                      exact insight to then partner with you – ultimately
+                      finding the exact solution for your business to reach the
+                      desired goals.
+                    </p>
+                  </article>
+                  <div class="service__img">
+                    <img
+                      src="./assets/exported_assets/expertise_photos/architect.png"
+                      alt="service_image"
+                      class="service__img--source"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide qa">
+                <div class="service__container">
+                  <article class="service__description">
+                    <h3 class="service__description--title">
+                      Software Quality Assurance
+                    </h3>
+                    <p class="service__description--content">
+                      As SQA experts, we offer you comprehensive and in-detail
+                      continuous monitoring and testing to ensure that your
+                      software is up to your exact standards at all times. With
+                      us, you can just sit back and focus on your own business,
+                      while we’ll handle all the testing–bringing you an optimal
+                      software experience at all times.
+                    </p>
+                  </article>
+                  <div class="service__img">
+                    <img
+                      src="./assets/exported_assets/expertise_photos/software_quality.png"
+                      alt="service_image"
+                      class="service__img--source"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide lunch">
+                <div class="service__container" id="service__container--lunch">
+                  <article class="service__description">
+                    <h3 class="service__description--title">Product launch</h3>
+                    <p class="service__description--content">
+                      Launching a product with us will be smooth sailing and
+                      quality-driven. As personalization is our bread and
+                      butter, we constantly aim at tailoring the launch and the
+                      goal achievements to your exact requirements. Ultimately
+                      bringing the best experience to you and your users.
+                    </p>
+                  </article>
+                  <div class="service__img">
+                    <img
+                      src="./assets/exported_assets/expertise_photos/product_lunch.png"
+                      alt="service_image"
+                      class="service__img--source"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide audit">
+                <div class="service__container" id="service__container--audit">
+                  <article class="service__description">
+                    <h3 class="service__description--title">Audit</h3>
+                    <p class="service__description--content">
+                      With our precision and eye for detail, no nook or cranny
+                      will be left out of our peripheral. Providing impeccable
+                      auditing services to ensure all assessments cover
+                      everything from A to Z. This way your IT qualms will be
+                      eradicated before they even surface.
+                    </p>
+                  </article>
+                  <div class="service__img">
+                    <img
+                      src="./assets/exported_assets/expertise_photos/audit.png"
+                      alt="service_image"
+                      class="service__img--source"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+          </div>
+        </div>
       </div>
       <div class="section__container part_two">
         <h2 class="services--title">Interested in our services ?</h2>
@@ -357,31 +509,37 @@
 
     <!--  -->
     <article class="idiom__result--driven">
-      <h2 class="idiom__title">
-        Groundbreaking, Result-Driven, and Customer-Centered
-        <span class="quotes quotes_start"></span>
-        <span class="quotes quotes_end"></span>
-      </h2>
-      <h3 class="idiom__answer">
-        These Are Exactly The Words Our Clients Use To Describe Us
-      </h3>
+      <div class="section__container">
+        <h2 class="idiom__title">
+          Groundbreaking, Result-Driven, and Customer-Centered
+          <span class="quotes quotes_start"></span>
+          <span class="quotes quotes_end"></span>
+        </h2>
+        <div class="text-center">
+          <h3 class="idiom__answer">
+            These Are Exactly The Words Our Clients Use To Describe Us
+          </h3>
+        </div>
+      </div>
     </article>
 
     <section class="section section__partners">
       <div class="section__line line__bg"></div>
-      <div class="section__line line__bg--bottom"></div>
+
       <div class="section__container">
         <h3 class="section__partners--title">
           Renowned Businesses Trust Our Experience
         </h3>
         <div class="partner__list">
-          <div class="partner__list--wrapper">
-            <div class="partner__list--item"></div>
-            <div class="partner__list--item"></div>
-            <div class="partner__list--item"></div>
-            <div class="partner__list--item"></div>
-            <div class="partner__list--item"></div>
-            <div class="partner__list--item"></div>
+          <div class="partner__list--wrapper-box">
+            <div class="partner__list--wrapper">
+              <div class="partner__list--item"></div>
+              <div class="partner__list--item"></div>
+              <div class="partner__list--item"></div>
+              <div class="partner__list--item"></div>
+              <div class="partner__list--item"></div>
+              <div class="partner__list--item"></div>
+            </div>
           </div>
           <span class="partner__list--arrow arrow__left">
             <svg
@@ -441,6 +599,9 @@
             That’s why businesses partner and trust us.
           </h3>
         </div>
+      </div>
+      <div class="p-relative">
+        <div class="section__line line__bg--bottom"></div>
       </div>
 
       <div class="partner__section--asked-title-wrapper">
@@ -699,33 +860,8 @@
     <div class="swiper-container" style="height: 400px; text-align: center">
       <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div>test title</div>
-          <div style="text-align: center">
-            <img src="./assets/exported_assets/icons/badge.svg" alt="asdas" />
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            in cumque quidem tempora vero itaque nesciunt dolores totam et
-            cupiditate. At, quam id vitae earum non doloremque illum ullam
-            autem.
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div>test title</div>
-          <div style="text-align: center">
-            <img src="./assets/exported_assets/icons/code.svg" alt="asdas" />
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            in cumque quidem tempora vero itaque nesciunt dolores totam et
-            cupiditate. At, quam id vitae earum non doloremque illum ullam
-            autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
-            tempora veritatis laudantium aspernatur id, autem facilis alias a,
-            voluptate nam quisquam, modi iusto similique eaque dolor ipsa quod
-            enim soluta.
-          </div>
-        </div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
       </div>
       <!-- Add Pagination -->
     </div>
@@ -734,6 +870,13 @@
       var swiper = new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
+        },
+      });
+
+      var swiper = new Swiper('.services__touch--view', {
+        spaceBetween: 30,
+        pagination: {
+          el: '.services__touch-pagination',
         },
       });
 
@@ -801,6 +944,17 @@
         );
       }
 
+      function handle_scroll(ev) {
+        const scrollTop = $(document).scrollTop();
+        if (scrollTop > 200) {
+          $('.scroller__icon').fadeOut();
+          $('.scroller').removeClass('visible');
+        } else if (scrollTop < 100) {
+          $('.scroller').addClass('visible');
+          $('.scroller__icon').fadeIn();
+        }
+      }
+
       $(document).ready(function () {
         //
         $('.services__list--item').on('click', services_tab);
@@ -808,10 +962,12 @@
         $('.project_item').on('click', projects_tab);
 
         // Add smooth scrolling to all links
-        $('.header__item').on('click', function (event) {
+        $('.header__item, .scroller.visible').on('click', function (event) {
           const _hash = $(event.currentTarget).attr('target-section');
           scroll_to(_hash);
         });
+
+        $(document).on('scroll', handle_scroll);
       });
     </script>
   </body>

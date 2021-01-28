@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'variables';
 @import 'fonts';
+@import 'ready-classes';
 
 body,
 html {
@@ -9,25 +10,25 @@ html {
   // scroll-behavior: smooth;
 }
 
+.mobile-view{
+  display: none;
+}
+
 .standart-btn {
   color: $white;
   background-color: $main_blue;
   text-transform: uppercase;
-  font-size: $h8_fs;
+  @extend .h8_fs;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
 .section__container {
-  // max-width: $content_max_width_xlg;
- 
   margin: 0 auto;
   z-index: 2;
   position: relative;
 }
-
-
 
 section {
   width: 100%;
@@ -49,5 +50,3 @@ section {
 @import 'section_projects';
 
 @import 'section_footer';
-
-

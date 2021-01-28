@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'ready-classes';
 
 .section__services {
   padding-top: 100px;
@@ -12,7 +13,8 @@
     height: 30px;
     text-transform: capitalize;
     color: #949494;
-    font-size: $h5_fs;
+
+    @extend .h5_fs;
     font-weight: 700;
     background-color: #fff;
     line-height: 30px;
@@ -186,7 +188,7 @@
           left: 50%;
           text-align: center;
           transform: translate(-50%, 0);
-          font-size: $h8_fs;
+          @extend .h8_fs;
           line-height: $standart_line_height;
         }
       }
@@ -201,31 +203,65 @@
     width: 100%;
     top: 186px;
     &.active {
-      display: flex;
+      display: grid;
     }
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     .service__description {
-      width: calc(100% - 730px);
-      height: 100%;
       .service__description--title {
-        font-size: $h2_fs;
+        @extend .h2_fs;
         font-weight: bold;
         color: $main_blue;
         padding-bottom: $standart_padding + 4px;
       }
       .service__description--content {
         line-height: $standart_line_height;
-        font-size: $h9_fs;
+        @extend .h9_fs;
         color: $txt_content_color;
-        width: 604px;
       }
     }
     .service__img {
       display: flex;
-      align-items: flex-end;
-      width: 728px;
-      height: 100%;
-      // 460px
-      // background: url(../assets/exported_assets/expertise_photos/Rectangle.png);
+      align-items: flex-start;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .swiper-slide {
+    .service__container {
+      position: static;
+      display: grid;
+      justify-content: center;
+      overflow: hidden;
+      width: 100%;
+      top: 186px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      height: auto;
+      .service__description {
+        .service__description--title {
+          @extend .h2_fs;
+          font-weight: bold;
+          color: $main_blue;
+          padding-bottom: $standart_padding + 4px;
+        }
+        .service__description--content {
+          line-height: $standart_line_height;
+          @extend .h9_fs;
+          color: $txt_content_color;
+        }
+      }
+      .service__img {
+        display: flex;
+        align-items: flex-start;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }
@@ -234,7 +270,7 @@
   border: 2px solid rgba(42, 42, 42, 0.1);
   position: absolute;
   height: 100%;
-  width: calc((100vw - ((100vw - 1472px) / 2)) + 40px);
+  // width: calc((100vw - ((100vw - 1472px) / 2)) + 40px);
   &::after {
     content: '';
     position: absolute;
@@ -276,7 +312,7 @@
         align-items: center;
         justify-content: flex-start;
         .inner__section--container-content {
-          font-size: $h6_fs;
+          @extend .h6_fs;
           position: relative;
           color: #fff;
           width: 716px;
@@ -309,7 +345,7 @@
 
     .services--title {
       color: #3e3e3e;
-      font-size: $h2_fs;
+      @extend .h2_fs;
       font-weight: bold;
     }
   }
@@ -341,10 +377,10 @@
   .idiom__title {
     font-size: $h4_fs;
     font-weight: bold;
+    text-align: center;
     color: $main_blue;
-    padding-bottom: 36px;
     position: relative;
-    padding: 20px 50px 40px 50px;
+    padding: 20px 20px 36px;
 
     .quotes {
       position: absolute;
@@ -352,21 +388,23 @@
       height: 86px;
       &.quotes_start {
         bottom: 100%;
-        right: 100%;
+        right: 95%;
         background: url(../assets/exported_assets/icons/quotes_start.svg)
           no-repeat center center;
       }
       &.quotes_end {
         top: 100%;
-        left: 100%;
+        left: 95%;
         background: url(../assets/exported_assets/icons/quoutes_end.svg)
           no-repeat center center;
       }
     }
   }
   .idiom__answer {
-    font-size: $h7_fs;
+    @extend .h7_fs;
     color: $txt_color;
+    display: inline-block;
+    margin: 0 auto;
     position: relative;
     &::after {
       content: '';
