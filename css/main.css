@@ -584,7 +584,6 @@ table {
 body,
 html {
   font-family: 'Montserrat';
-  padding-bottom: 300px;
 }
 
 .mobile-view--wrapper,
@@ -956,7 +955,7 @@ section {
 .mobile__section_action {
   padding: 16px 10px;
   border-radius: 5px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .section__action {
@@ -1180,7 +1179,7 @@ section {
 .section__about .section__two--secondary-title {
   color: rgba(7, 80, 228, 0.5);
   font-size: 20px;
-  line-height: 1.6;
+  line-height: 1.5;
   font-weight: 700;
   padding-bottom: 100px;
   padding-top: 10px;
@@ -1197,7 +1196,7 @@ section {
   color: #545454;
   font-size: 16px;
   width: 880px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .section__about .section__two--txt-content .section__two--seperator {
@@ -1213,7 +1212,18 @@ section {
 }
 
 .section__about .standart-btn {
-  padding: 20px 136px;
+  height: 60px;
+  width: 300px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: -webkit-transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1254,14 +1264,14 @@ section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .under_about--title {
   font-size: 45px;
   font-weight: bold;
   color: #2A2A2A;
-  line-height: 1.6;
+  line-height: 1.5;
   text-transform: capitalize;
   text-align: center;
 }
@@ -1651,7 +1661,7 @@ section {
   text-align: center;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .services_content_wrapper .service__container {
@@ -1678,7 +1688,7 @@ section {
 }
 
 .services_content_wrapper .service__container .service__description .service__description--content {
-  line-height: 1.6;
+  line-height: 1.5;
   color: #545454;
 }
 
@@ -1719,7 +1729,7 @@ section {
 }
 
 .services_content_wrapper .swiper-slide .service__container .service__description .service__description--content {
-  line-height: 1.6;
+  line-height: 1.5;
   color: #545454;
 }
 
@@ -1796,7 +1806,7 @@ section {
   position: relative;
   color: #fff;
   width: 716px;
-  line-height: 1.8;
+  line-height: 1.7;
   padding-left: 120px;
 }
 
@@ -2186,7 +2196,7 @@ section {
 .project__details--description .project__details--description-title {
   font-size: 20px;
   color: #0750e4;
-  line-height: 1.6;
+  line-height: 1.5;
   padding: 0 14px 30px 14px;
   font-weight: 700;
 }
@@ -2199,7 +2209,7 @@ section {
   color: #545454;
   padding-bottom: 16px;
   text-transform: capitalize;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .section__footer {
@@ -2215,7 +2225,7 @@ section {
 
 .section__footer .contact__form .section__socials {
   position: absolute;
-  left: calc(100% + 80px);
+  left: calc(100% - 50px);
   top: 25%;
   height: 136px;
   display: block;
@@ -2302,29 +2312,29 @@ section {
 }
 
 .section__footer .contact__form .contact__form--grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.3fr 100px;
+      grid-template-columns: 1fr 1.3fr 100px;
 }
 
 .section__footer .contact__form .contact__form--grid .contact__form--grid--inputs {
   max-width: 730px;
+  width: 100%;
 }
 
 .section__footer .contact__form .contact__form--grid .contact__form--grid--inputs-box {
   display: -ms-grid;
   display: grid;
-  width: 730px;
+  width: 100%;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
 .section__footer .contact__form .contact__form--grid .contact__form--grid--inputs-box .contact__form-input {
-  padding: 10px 14px;
+  padding: 16px 14px;
+  font-size: 18px;
   width: 100%;
   border: none;
   outline: none;
@@ -2349,7 +2359,7 @@ section {
   width: 100%;
   margin-top: 20px;
   height: 328px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #2a2a2a;
   background-color: #fff;
   border-style: none;

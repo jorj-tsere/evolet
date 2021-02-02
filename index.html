@@ -923,7 +923,9 @@
               </nav>
             </div>
             <div class="swiper-slide telecommunications">
-              <h2 class="project__details--description-h2">Telecommunications</h2>
+              <h2 class="project__details--description-h2">
+                Telecommunications
+              </h2>
               <h3 class="project__details--description-title">
                 Finding modern solutions to modern-day needs by assisting mobile
                 and internet providers to create innovative systems to scale
@@ -931,9 +933,9 @@
               </h3>
               <div class="project__details--img">
                 <img
-                src="./assets/exported_assets/projects_photos/Telecommunications_pg.png"
-                alt="Telecommunications_pg"
-              />
+                  src="./assets/exported_assets/projects_photos/Telecommunications_pg.png"
+                  alt="Telecommunications_pg"
+                />
               </div>
               <nav class="project__details--description-list-nav">
                 <ul class="project__details--description-list">
@@ -1004,7 +1006,7 @@
     <section class="section section__footer" id="contact">
       <div class="section__container">
         <form action="/" method="" class="contact__form">
-          <div class="section__socials">
+          <div class="section__socials desktop__version">
             <a href="#in_link" class="section__socials--icon social_in"></a>
             <a href="#fb_link" class="section__socials--icon social_fb"></a>
             <div class="section__socials--content"></div>
@@ -1177,10 +1179,9 @@
           toggle_burger_menu();
           $('.burger_menu_tabs').toggleClass('open');
           $('.burger_menu_tabs').toggleClass('close');
-          setTimeout(() => {
-            const _hash = $(event.currentTarget).attr('target-section');
-            scroll_to(_hash);
-          }, 400);
+
+          const _hash = $(event.currentTarget).attr('target-section');
+          scroll_to(_hash);
         });
 
         $('#b-container').on('click', function () {
@@ -1191,15 +1192,13 @@
       });
 
       function toggle_burger_menu() {
-          let that = $('#b-container');
-          if (that.hasClass('is-open')) {
-            that.removeClass('is-open').addClass('is-closed');
-          } else {
-            that.removeClass('is-closed').addClass('is-open');
-          }
-
-      } 
-
+        let that = $('#b-container');
+        if (that.hasClass('is-open')) {
+          that.removeClass('is-open').addClass('is-closed');
+        } else {
+          that.removeClass('is-closed').addClass('is-open');
+        }
+      }
     </script>
   </body>
 </html>

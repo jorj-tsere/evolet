@@ -116,7 +116,7 @@
 .project__details--description .project__details--description-title {
   font-size: 20px;
   color: #0750e4;
-  line-height: 1.6;
+  line-height: 1.5;
   padding: 0 14px 30px 14px;
   font-weight: 700;
 }
@@ -129,5 +129,5 @@
   color: #545454;
   padding-bottom: 16px;
   text-transform: capitalize;
-  line-height: 1.6;
+  line-height: 1.5;
 }

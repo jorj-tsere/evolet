@@ -347,7 +347,7 @@
   text-align: center;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .services_content_wrapper .service__container {
@@ -374,7 +374,7 @@
 }
 
 .services_content_wrapper .service__container .service__description .service__description--content {
-  line-height: 1.6;
+  line-height: 1.5;
   color: #545454;
 }
 
@@ -415,7 +415,7 @@
 }
 
 .services_content_wrapper .swiper-slide .service__container .service__description .service__description--content {
-  line-height: 1.6;
+  line-height: 1.5;
   color: #545454;
 }
 
@@ -492,7 +492,7 @@
   position: relative;
   color: #fff;
   width: 716px;
-  line-height: 1.8;
+  line-height: 1.7;
   padding-left: 120px;
 }
 
