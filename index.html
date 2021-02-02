@@ -48,7 +48,7 @@
           </nav>
           <div class="header__menu--sm flex-item">
             <div class="stage">
-              <div class="b-container">
+              <div class="b-container" id="b-container">
                 <div class="line-top"></div>
                 <div class="line-middle"></div>
                 <div class="line-bottom"></div>
@@ -382,12 +382,21 @@
             class="mobile-view services__touch--view"
             style="text-align: center"
           >
-            <div class="services__touch-pagination"></div>
+            <div class="services__touch-pagination mb-20"></div>
             <div class="swiper-wrapper">
               <div class="swiper-slide Consulting">
                 <div class="service__container">
                   <article class="service__description">
                     <h3 class="service__description--title">Consulting</h3>
+
+                    <div class="service__img">
+                      <img
+                        src="./assets/exported_assets/expertise_photos/consulting.png"
+                        alt="service_image"
+                        class="service__img--source"
+                      />
+                    </div>
+
                     <p class="service__description--content">
                       We offer businesses highly valued IT consulting to enable
                       you and your business high-level growth, scalability, and
@@ -397,13 +406,6 @@
                       life.
                     </p>
                   </article>
-                  <div class="service__img">
-                    <img
-                      src="./assets/exported_assets/expertise_photos/consulting.png"
-                      alt="service_image"
-                      class="service__img--source"
-                    />
-                  </div>
                 </div>
               </div>
               <div class="swiper-slide develope">
@@ -412,6 +414,13 @@
                     <h3 class="service__description--title">
                       Developing Software
                     </h3>
+                    <div class="service__img">
+                      <img
+                        src="./assets/exported_assets/expertise_photos/develope.png"
+                        alt="service_image"
+                        class="service__img--source"
+                      />
+                    </div>
                     <p class="service__description--content">
                       We continue to reimagine what innovation in the tech
                       economy means, which is why we continuously offer our
@@ -421,13 +430,6 @@
                       but aiding your business in ultimate growth.
                     </p>
                   </article>
-                  <div class="service__img">
-                    <img
-                      src="./assets/exported_assets/expertise_photos/develope.png"
-                      alt="service_image"
-                      class="service__img--source"
-                    />
-                  </div>
                 </div>
               </div>
               <div class="swiper-slide achitecture">
@@ -436,6 +438,13 @@
                     <h3 class="service__description--title">
                       Constructing Architecture
                     </h3>
+                    <div class="service__img">
+                      <img
+                        src="./assets/exported_assets/expertise_photos/architect.png"
+                        alt="service_image"
+                        class="service__img--source"
+                      />
+                    </div>
                     <p class="service__description--content">
                       To disrupt and show innovation in today’s digital economy,
                       focusing on having well-designed and highly functioning
@@ -446,13 +455,6 @@
                       desired goals.
                     </p>
                   </article>
-                  <div class="service__img">
-                    <img
-                      src="./assets/exported_assets/expertise_photos/architect.png"
-                      alt="service_image"
-                      class="service__img--source"
-                    />
-                  </div>
                 </div>
               </div>
               <div class="swiper-slide qa">
@@ -461,6 +463,13 @@
                     <h3 class="service__description--title">
                       Software Quality Assurance
                     </h3>
+                    <div class="service__img">
+                      <img
+                        src="./assets/exported_assets/expertise_photos/software_quality.png"
+                        alt="service_image"
+                        class="service__img--source"
+                      />
+                    </div>
                     <p class="service__description--content">
                       As SQA experts, we offer you comprehensive and in-detail
                       continuous monitoring and testing to ensure that your
@@ -470,19 +479,19 @@
                       software experience at all times.
                     </p>
                   </article>
-                  <div class="service__img">
-                    <img
-                      src="./assets/exported_assets/expertise_photos/software_quality.png"
-                      alt="service_image"
-                      class="service__img--source"
-                    />
-                  </div>
                 </div>
               </div>
               <div class="swiper-slide lunch">
                 <div class="service__container" id="service__container--lunch">
                   <article class="service__description">
                     <h3 class="service__description--title">Product launch</h3>
+                    <div class="service__img">
+                      <img
+                        src="./assets/exported_assets/expertise_photos/product_lunch.png"
+                        alt="service_image"
+                        class="service__img--source"
+                      />
+                    </div>
                     <p class="service__description--content">
                       Launching a product with us will be smooth sailing and
                       quality-driven. As personalization is our bread and
@@ -491,19 +500,19 @@
                       bringing the best experience to you and your users.
                     </p>
                   </article>
-                  <div class="service__img">
-                    <img
-                      src="./assets/exported_assets/expertise_photos/product_lunch.png"
-                      alt="service_image"
-                      class="service__img--source"
-                    />
-                  </div>
                 </div>
               </div>
               <div class="swiper-slide audit">
                 <div class="service__container" id="service__container--audit">
                   <article class="service__description">
                     <h3 class="service__description--title">Audit</h3>
+                    <div class="service__img">
+                      <img
+                        src="./assets/exported_assets/expertise_photos/audit.png"
+                        alt="service_image"
+                        class="service__img--source"
+                      />
+                    </div>
                     <p class="service__description--content">
                       With our precision and eye for detail, no nook or cranny
                       will be left out of our peripheral. Providing impeccable
@@ -512,13 +521,6 @@
                       eradicated before they even surface.
                     </p>
                   </article>
-                  <div class="service__img">
-                    <img
-                      src="./assets/exported_assets/expertise_photos/audit.png"
-                      alt="service_image"
-                      class="service__img--source"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -643,7 +645,7 @@
         <div class="section__line line__bg--bottom"></div>
       </div>
 
-      <div class="partner__section--asked-title-wrapper">
+      <div class="partner__section--asked-title-wrapper desktop__version">
         <h4 class="partner__section--asked-title">
           <a href="#" class="partner__section--asked-title-href">
             Want To Partner With Us?
@@ -660,177 +662,341 @@
         <span class="section__services--title-txt">Evolet’s Projects</span>
       </h2>
 
-      <nav class="projects">
-        <ul class="projects__lists">
-          <li target-block="FinTech__content" class="project_item active">
-            FinTech
-          </li>
-          <li target-block="Gambling__content" class="project_item">
-            Gambling
-          </li>
-          <li target-block="Telecommunications__content" class="project_item">
-            Telecommunications
-          </li>
-          <li target-block="Other__content" class="project_item">Other</li>
-        </ul>
-      </nav>
-      <div id="FinTech__content" class="project__details--box active">
-        <div class="project__details">
-          <div class="project__details--img">
-            <img
-              src="./assets/exported_assets/projects_photos/fintech_bg.png"
-              alt="fintech"
-            />
+      <div class="desktop__version">
+        <nav class="projects">
+          <ul class="projects__lists">
+            <li target-block="FinTech__content" class="project_item active">
+              FinTech
+            </li>
+            <li target-block="Gambling__content" class="project_item">
+              Gambling
+            </li>
+            <li target-block="Telecommunications__content" class="project_item">
+              Telecommunications
+            </li>
+            <li target-block="Other__content" class="project_item">Other</li>
+          </ul>
+        </nav>
+        <div class="project__details--wrapper">
+          <div id="FinTech__content" class="project__details--box active">
+            <div class="project__details">
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/fintech_bg.png"
+                  alt="fintech"
+                />
+              </div>
+            </div>
+            <div class="project__details--description">
+              <h3 class="project__details--description-title">
+                Delivering innovative FinTech to our clients within the field to
+                ensure smart, seamless, and groundbreaking financial solutions
+              </h3>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Core Management System Of Insurance Companies
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core Management System Of The Hospital
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core System For Managing And Monitoring Observations
+                    Regarding Elections
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Complete HR Management System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Digital Document Library
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Examination Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Training Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Loans P2P System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Book Authorization Distribution Protection System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Big Data Automated Analysis And Processing Systems
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
-        <div class="project__details--description">
-          <h3 class="project__details--description-title">
-            Delivering innovative FinTech to our clients within the field to
-            ensure smart, seamless, and groundbreaking financial solutions
-          </h3>
-          <nav class="project__details--description-list-nav">
-            <ul class="project__details--description-list">
-              <li class="project__details--description-list-item">
-                Core Management System Of Insurance Companies
-              </li>
-              <li class="project__details--description-list-item">
-                Core Management System Of The Hospital
-              </li>
-              <li class="project__details--description-list-item">
-                Core System For Managing And Monitoring Observations Regarding
-                Elections
-              </li>
-              <li class="project__details--description-list-item">
-                Complete HR Management System
-              </li>
-              <li class="project__details--description-list-item">
-                Digital Document Library
-              </li>
-              <li class="project__details--description-list-item">
-                Online Examination Systems
-              </li>
-              <li class="project__details--description-list-item">
-                Online Training Systems
-              </li>
-              <li class="project__details--description-list-item">
-                Online Loans P2P System
-              </li>
-              <li class="project__details--description-list-item">
-                Online Book Authorization Distribution Protection System
-              </li>
-              <li class="project__details--description-list-item">
-                Big Data Automated Analysis And Processing Systems
-              </li>
-            </ul>
-          </nav>
+          <div id="Gambling__content" class="project__details--box">
+            <div class="project__details">
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/gambling_bg.png"
+                  alt="gambling"
+                />
+              </div>
+            </div>
+            <div class="project__details--description">
+              <h3 class="project__details--description-title">
+                Novel solutions for Gambling. Offering vast solutions to
+                reaching maximum customer attraction and retention with simple
+                full-proof assistance.
+              </h3>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Online Betting Portal
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Totalizator Betting Core System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Games
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div id="Telecommunications__content" class="project__details--box">
+            <div class="project__details">
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/Telecommunications_pg.png"
+                  alt="Telecommunications_pg"
+                />
+              </div>
+            </div>
+            <div class="project__details--description">
+              <h3 class="project__details--description-title">
+                Finding modern solutions to modern-day needs by assisting mobile
+                and internet providers to create innovative systems to scale
+                their business better.
+              </h3>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Billing System For Mobile Service Providers
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Billing System For Internet Service Providers
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div id="Other__content" class="project__details--box">
+            <div class="project__details">
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/other_bg.png"
+                  alt="other_bg"
+                />
+              </div>
+            </div>
+            <div class="project__details--description">
+              <h3 class="project__details--description-title">
+                Modernizing IT solutions to a multitude of industries to
+                showcase growth, scalability and reliability
+              </h3>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Core Management System Of Insurance Companies
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core Management System Of The Hospital
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core System For Managing And Monitoring Observations
+                    Regarding Elections
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Complete HR Management System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Digital Document Library
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Examination Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Training Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Loans P2P System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Book Authorization Distribution Protection System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Big Data Automated Analysis And Processing Systems
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="Gambling__content" class="project__details--box">
-        <div class="project__details">
-          <div class="project__details--img">
-            <img
-              src="./assets/exported_assets/projects_photos/gambling_bg.png"
-              alt="fintech"
-            />
+
+      <div class="section__container mobile-view--wrapper">
+        <div
+          class="mobile-view projects__touch--view"
+          style="text-align: center"
+        >
+          <div class="projects__touch-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide finTech">
+              <h2 class="project__details--description-h2">FinTech</h2>
+              <h3 class="project__details--description-title">
+                Delivering innovative FinTech to our clients within the field to
+                ensure smart, seamless, and groundbreaking financial solutions
+              </h3>
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/fintech_bg.png"
+                  alt="fintech"
+                />
+              </div>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Core Management System Of Insurance Companies
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core Management System Of The Hospital
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core System For Managing And Monitoring Observations
+                    Regarding Elections
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Complete HR Management System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Digital Document Library
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Examination Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Training Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Loans P2P System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Book Authorization Distribution Protection System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Big Data Automated Analysis And Processing Systems
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="swiper-slide gambling">
+              <h2 class="project__details--description-h2">Gambling</h2>
+              <h3 class="project__details--description-title">
+                Novel solutions for Gambling. Offering vast solutions to
+                reaching maximum customer attraction and retention with simple
+                full-proof assistance.
+              </h3>
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/gambling_bg.png"
+                  alt="gambling"
+                />
+              </div>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Online Betting Portal
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Totalizator Betting Core System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Games
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="swiper-slide telecommunications">
+              <h2 class="project__details--description-h2">Telecommunications</h2>
+              <h3 class="project__details--description-title">
+                Finding modern solutions to modern-day needs by assisting mobile
+                and internet providers to create innovative systems to scale
+                their business better.
+              </h3>
+              <div class="project__details--img">
+                <img
+                src="./assets/exported_assets/projects_photos/Telecommunications_pg.png"
+                alt="Telecommunications_pg"
+              />
+              </div>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Billing System For Mobile Service Providers
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Billing System For Internet Service Providers
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="swiper-slide other">
+              <h2 class="project__details--description-h2">Other</h2>
+              <h3 class="project__details--description-title">
+                Modernizing IT solutions to a multitude of industries to
+                showcase growth, scalability and reliability
+              </h3>
+              <div class="project__details--img">
+                <img
+                  src="./assets/exported_assets/projects_photos/other_bg.png"
+                  alt="other_bg"
+                />
+              </div>
+              <nav class="project__details--description-list-nav">
+                <ul class="project__details--description-list">
+                  <li class="project__details--description-list-item">
+                    Core Management System Of Insurance Companies
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core Management System Of The Hospital
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Core System For Managing And Monitoring Observations
+                    Regarding Elections
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Complete HR Management System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Digital Document Library
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Examination Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Training Systems
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Loans P2P System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Online Book Authorization Distribution Protection System
+                  </li>
+                  <li class="project__details--description-list-item">
+                    Big Data Automated Analysis And Processing Systems
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
-        <div class="project__details--description">
-          <h3 class="project__details--description-title">
-            Novel solutions for Gambling. Offering vast solutions to reaching
-            maximum customer attraction and retention with simple full-proof
-            assistance.
-          </h3>
-          <nav class="project__details--description-list-nav">
-            <ul class="project__details--description-list">
-              <li class="project__details--description-list-item">
-                Online Betting Portal
-              </li>
-              <li class="project__details--description-list-item">
-                Totalizator Betting Core System
-              </li>
-              <li class="project__details--description-list-item">
-                Online Games
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div id="Telecommunications__content" class="project__details--box">
-        <div class="project__details">
-          <div class="project__details--img">
-            <img
-              src="./assets/exported_assets/projects_photos/Telecommunications_pg.png"
-              alt="fintech"
-            />
-          </div>
-        </div>
-        <div class="project__details--description">
-          <h3 class="project__details--description-title">
-            Finding modern solutions to modern-day needs by assisting mobile and
-            internet providers to create innovative systems to scale their
-            business better.
-          </h3>
-          <nav class="project__details--description-list-nav">
-            <ul class="project__details--description-list">
-              <li class="project__details--description-list-item">
-                Billing System For Mobile Service Providers
-              </li>
-              <li class="project__details--description-list-item">
-                Billing System For Internet Service Providers
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div id="Other__content" class="project__details--box">
-        <div class="project__details">
-          <div class="project__details--img">
-            <img
-              src="./assets/exported_assets/projects_photos/other_bg.png"
-              alt="other_bg"
-            />
-          </div>
-        </div>
-        <div class="project__details--description">
-          <h3 class="project__details--description-title">
-            Modernizing IT solutions to a multitude of industries to showcase
-            growth, scalability and reliability
-          </h3>
-          <nav class="project__details--description-list-nav">
-            <ul class="project__details--description-list">
-              <li class="project__details--description-list-item">
-                Core Management System Of Insurance Companies
-              </li>
-              <li class="project__details--description-list-item">
-                Core Management System Of The Hospital
-              </li>
-              <li class="project__details--description-list-item">
-                Core System For Managing And Monitoring Observations Regarding
-                Elections
-              </li>
-              <li class="project__details--description-list-item">
-                Complete HR Management System
-              </li>
-              <li class="project__details--description-list-item">
-                Digital Document Library
-              </li>
-              <li class="project__details--description-list-item">
-                Online Examination Systems
-              </li>
-              <li class="project__details--description-list-item">
-                Online Training Systems
-              </li>
-              <li class="project__details--description-list-item">
-                Online Loans P2P System
-              </li>
-              <li class="project__details--description-list-item">
-                Online Book Authorization Distribution Protection System
-              </li>
-              <li class="project__details--description-list-item">
-                Big Data Automated Analysis And Processing Systems
-              </li>
-            </ul>
-          </nav>
+
+          <!-- Add Pagination -->
         </div>
       </div>
     </section>
@@ -896,26 +1062,18 @@
       </div>
     </section>
 
-    <div class="swiper-container" style="height: 400px; text-align: center">
-      <div class="swiper-pagination"></div>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-      </div>
-      <!-- Add Pagination -->
-    </div>
-
     <script>
-      var swiper = new Swiper('.swiper-container', {
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      });
-
-      var swiper = new Swiper('.services__touch--view', {
+      var swiper_services = new Swiper('.services__touch--view', {
         spaceBetween: 30,
         pagination: {
           el: '.services__touch-pagination',
+        },
+      });
+
+      var swiper_projects = new Swiper('.projects__touch--view', {
+        spaceBetween: 30,
+        pagination: {
+          el: '.projects__touch-pagination',
         },
       });
 
@@ -1005,12 +1163,18 @@
           '.header__item, .scroller.visible, .section__action--content--inner'
         ).on('click', function (event) {
           const _hash = $(event.currentTarget).attr('target-section');
+          if ($('#mob-menu').is(':visible')) {
+            $('body').addClass('fixed-position');
+          } else {
+            $('body').removeClass('fixed-position');
+          }
           scroll_to(_hash);
         });
 
         $(document).on('scroll', handle_scroll);
 
         $('.burger_menu--tab-item').on('click', function (event) {
+          toggle_burger_menu();
           $('.burger_menu_tabs').toggleClass('open');
           $('.burger_menu_tabs').toggleClass('close');
           setTimeout(() => {
@@ -1019,17 +1183,23 @@
           }, 400);
         });
 
-        $('.b-container').on('click', function () {
-          var that = $(this);
+        $('#b-container').on('click', function () {
+          toggle_burger_menu();
+          $('.burger_menu_tabs').toggleClass('open');
+          $('.burger_menu_tabs').toggleClass('close');
+        });
+      });
+
+      function toggle_burger_menu() {
+          let that = $('#b-container');
           if (that.hasClass('is-open')) {
             that.removeClass('is-open').addClass('is-closed');
           } else {
             that.removeClass('is-closed').addClass('is-open');
           }
-          $('.burger_menu_tabs').toggleClass('open');
-          $('.burger_menu_tabs').toggleClass('close');
-        });
-      });
+
+      } 
+
     </script>
   </body>
 </html>

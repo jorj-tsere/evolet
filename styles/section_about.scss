@@ -105,7 +105,11 @@
     font-weight: 700;
   }
   .standart-btn {
-    padding: 20px 136px;
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     &:hover{
       transform: scale(1.1);

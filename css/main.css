@@ -592,6 +592,10 @@ html {
   display: none;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 .standart-btn {
   color: white;
   background-color: #0750e4;
@@ -1501,7 +1505,7 @@ section {
   border: 2px solid rgba(42, 42, 42, 0.1);
   position: absolute;
   left: 0;
-  top: -4px;
+  top: -3px;
   border-radius: 50%;
 }
 
@@ -2104,7 +2108,7 @@ section {
   border: 2px solid rgba(42, 42, 42, 0.1);
   position: absolute;
   left: 0;
-  top: -4px;
+  top: -3px;
   border-radius: 50%;
 }
 

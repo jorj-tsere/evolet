@@ -16,6 +16,10 @@ html {
   display: none;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 .standart-btn {
   color: $white;
   background-color: $main_blue;
