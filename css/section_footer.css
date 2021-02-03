@@ -1,5 +1,6 @@
 .section__footer {
-  margin-top: 290px;
+  width: 100%;
+  bottom: 0;
   padding-bottom: 90px;
   color: #ffffff;
   background-color: #2a2a2a;
@@ -26,7 +27,15 @@
 }
 
 .section__footer .contact__form .section__socials .section__socials--icon {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   right: -27px;
   position: absolute;
   width: 54px;
@@ -42,13 +51,12 @@
   background-color: #fff;
 }
 
-.section__footer .contact__form .section__socials .social_in {
-  bottom: calc(100% + 6px);
-  background-image: url(../assets/exported_assets/icons/socials/in_icon_white.svg);
+.section__footer .contact__form .section__socials .section__socials--icon:hover svg path {
+  fill: #2A2A2A;
 }
 
-.section__footer .contact__form .section__socials .social_in:hover {
-  background-image: url(../assets/exported_assets/icons/socials/in_gray_icon.png);
+.section__footer .contact__form .section__socials .social_in {
+  bottom: calc(100% + 6px);
 }
 
 .section__footer .contact__form .section__socials .social_in:hover::after {
@@ -63,11 +71,6 @@
 
 .section__footer .contact__form .section__socials .social_fb {
   top: calc(100% + 5px);
-  background-image: url(../assets/exported_assets/icons/socials/fb_icon_white.svg);
-}
-
-.section__footer .contact__form .section__socials .social_fb:hover {
-  background-image: url(../assets/exported_assets/icons/socials/fb_gray_icon.png);
 }
 
 .section__footer .contact__form .section__socials .social_fb:hover::after {
@@ -92,7 +95,7 @@
 
 .section__footer .contact__form .contact__from--input-label-value {
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 500;
   color: #fff;
   padding: 10px 0 40px;
 }

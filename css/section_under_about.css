@@ -1,3 +1,7 @@
+.under_about {
+  padding-bottom: 100px;
+}
+
 .idiom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,16 +10,22 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 165px;
+  padding-bottom: 45px;
+}
+
+.idiom:hover .idiom__txt--impact-segment {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  color: #0750e4;
+  -webkit-text-fill-color: #0750e4;
 }
 
 .idiom .idiom__txt {
   text-transform: capitalize;
   font-size: 50px;
   font-weight: 700;
-  color: transparent;
-  stroke-width: 1px;
-  -webkit-text-fill-color: transparent;
+  color: #0750e4;
+  -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0750e4;
 }
@@ -30,7 +40,17 @@
   line-height: 1.5;
 }
 
+.idiom .idiom__txt.idiom__txt--part-two .idiom__txt--impact-segment {
+  -webkit-transition: text-fill-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: text-fill-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, text-fill-color .3s ease-in-out;
+  transition: transform .3s ease-in-out, text-fill-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  padding-right: 14px;
+  display: inline-block;
+}
+
 .under_about--title {
+  padding: 120px 0 76px;
   font-size: 45px;
   font-weight: bold;
   color: #2A2A2A;
@@ -40,7 +60,7 @@
 }
 
 .under_about--title-secondary {
-  padding: 76px 0 120px 0;
+  padding: 20px 0;
   display: block;
   text-align: center;
   cursor: pointer;

@@ -16,7 +16,7 @@
       href="./assets/lib/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./minified-css/responsive.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/lib/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- MAIN SECTION STARTS -->
@@ -174,7 +174,8 @@
             working with business that makes
           </div>
           <div class="idiom__txt idiom__txt--part-two">
-            an impact in today’s world
+            <span class="idiom__txt--impact-segment">an impact</span> in today’s
+            world
           </div>
         </div>
         <h3 class="under_about--title">
@@ -571,15 +572,21 @@
         <h3 class="section__partners--title">
           Renowned Businesses Trust Our Experience
         </h3>
+
         <div class="partner__list">
           <div class="partner__list--wrapper-box">
-            <div class="partner__list--wrapper">
-              <div class="partner__list--item"></div>
-              <div class="partner__list--item"></div>
-              <div class="partner__list--item"></div>
-              <div class="partner__list--item"></div>
-              <div class="partner__list--item"></div>
-              <div class="partner__list--item"></div>
+            <div class="partner__list--wrapper" id="partner__list--wrapper">
+              <div class="partner__list--item">1</div>
+              <div class="partner__list--item">2</div>
+              <div class="partner__list--item">3</div>
+              <div class="partner__list--item">4</div>
+              <div class="partner__list--item">5</div>
+              <div class="partner__list--item">6</div>
+              <div class="partner__list--item">7</div>
+              <div class="partner__list--item">8</div>
+              <div class="partner__list--item">9</div>
+              <div class="partner__list--item">10</div>
+              <div style="clear:both;"></div>
             </div>
           </div>
           <span class="partner__list--arrow arrow__left">
@@ -631,6 +638,7 @@
             </svg>
           </span>
         </div>
+
         <div class="section__partners--secondary-title-box">
           <h3 class="section__partners--secondary-title-part-one">
             Constantly reimagining and transforming industries through our
@@ -1007,8 +1015,46 @@
       <div class="section__container">
         <form action="/" method="" class="contact__form">
           <div class="section__socials desktop__version">
-            <a href="#in_link" class="section__socials--icon social_in"></a>
-            <a href="#fb_link" class="section__socials--icon social_fb"></a>
+            <a href="#in_link" class="section__socials--icon social_in">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <g opacity="1">
+                  <g transform="translate(-180 -7479)">
+                    <g transform="translate(56 160)">
+                      <path
+                        d="M144,7339h-4v-7c0-1.92-.847-2.99-2.366-2.99-1.653,0-2.634,1.12-2.634,2.99v7h-4v-13h4v1.46a4.822,4.822,0,0,1,4.083-2.2c2.829,0,4.917,1.73,4.917,5.3V7339Zm-17.558-15.08a2.46,2.46,0,1,1,2.441-2.46,2.45,2.45,0,0,1-2.441,2.46ZM124,7339h5v-13h-5Z"
+                        fill="#fff"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            <a href="#fb_link" class="section__socials--icon social_fb">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="20"
+                viewBox="0 0 10 20"
+              >
+                <g opacity="0.9">
+                  <g transform="translate(-385 -7399)">
+                    <g transform="translate(56 160)">
+                      <path
+                        d="M335.821,7259v-9h2.733l.446-4h-3.179v-1.95c0-1.03.027-2.05,1.466-2.05h1.458v-2.86a16.556,16.556,0,0,0-2.519-.14c-2.646,0-4.3,1.66-4.3,4.7v2.3H329v4h2.923v9Z"
+                        fill="#fff"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
             <div class="section__socials--content"></div>
           </div>
           <h4 class="contact__form--title">Contact</h4>
@@ -1079,6 +1125,27 @@
         },
       });
 
+      const parnters_carousel_wrapper = $('#partner__list--wrapper');
+      const parnters_items = $('.partner__list--item');
+      const parnters_item_width =  Math.ceil($($('.partner__list--item')[0]).css('width').split('px')[0]);
+     
+      console.log(parnters_item_width);
+
+      const container_xlg = 1472;
+      const count_partners = parnters_items.length;
+      const parnters_items_margin = 37;
+      let busy_carousel = false;
+
+
+      function toggle_burger_menu() {
+        let that = $('#b-container');
+        if (that.hasClass('is-open')) {
+          that.removeClass('is-open').addClass('is-closed');
+        } else {
+          that.removeClass('is-closed').addClass('is-open');
+        }
+      }
+
       function services_tab(ev) {
         const next_active_tab_name = $(ev.currentTarget).attr('target-block');
 
@@ -1129,7 +1196,7 @@
           $('.project__details--box').removeClass('active');
           $('#' + next_active_tab_name)
             .addClass('active')
-            .fadeIn(100);
+            .fadeIn(200);
         });
       }
 
@@ -1154,7 +1221,57 @@
         }
       }
 
+      function carousel_slide(dir = -1) {
+        // 1 right, -1 left
+        let current_pos = parseInt(parnters_carousel_wrapper.css('left'), 10);
+        let next_position = current_pos + (dir * (parnters_item_width + parnters_items_margin));
+        if(current_pos === 0 &&  dir === 1) {
+          console.warn('left arrow limit');
+          return false;
+        }
+
+        console.log('current_pos', current_pos, 'next_position', next_position);
+
+        // let current_post_int = current_pos
+        // if(dir === 1 && (current_pos - (parnters_item_width + parnters_items_margin)) > 0) {
+        //   // console.log('left arrow: limit');
+        //   return false;
+        // } else if(dir === -1 && (current_pos - (parnters_item_width + parnters_items_margin)) < 0)
+        busy_carousel = true;
+        parnters_carousel_wrapper.animate(
+          { left: '+=' + (dir * (parnters_item_width + parnters_items_margin)) + 'px' },
+          'slow', () => {
+            busy_carousel = false; 
+          }
+        );
+       
+      }
+
+
+      function get_total_carousel_width() {
+        return ((count_partners - 1) * parnters_items_margin) +
+          parnters_item_width * count_partners;
+      }
+
       $(document).ready(function () {
+        let total_width = get_total_carousel_width();
+
+        console.log(
+          'count_partners',
+          count_partners,
+          'get width',
+          parnters_item_width,
+          'total_width',
+          total_width
+        );
+
+        $('.partner__list--arrow').on('click', function () {
+          let dir = $(this).hasClass('arrow__left') ? 1 : -1;
+          if(busy_carousel) return false;
+          carousel_slide(dir);
+        });
+
+        parnters_carousel_wrapper.css('width', total_width);
         //
         $('.services__list--item').on('click', services_tab);
 
@@ -1190,15 +1307,6 @@
           $('.burger_menu_tabs').toggleClass('close');
         });
       });
-
-      function toggle_burger_menu() {
-        let that = $('#b-container');
-        if (that.hasClass('is-open')) {
-          that.removeClass('is-open').addClass('is-closed');
-        } else {
-          that.removeClass('is-closed').addClass('is-open');
-        }
-      }
     </script>
   </body>
 </html>

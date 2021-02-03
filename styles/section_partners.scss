@@ -19,8 +19,6 @@
     }
   }
 
-
-
   .section__partners--title {
     background-color: #fff;
     padding: 10px 6px;
@@ -80,17 +78,22 @@
     .partner__list--wrapper-box {
       width: 100%;
       overflow: hidden;
-
+      position: relative;
       .partner__list--wrapper {
-        overflow: hidden;
-        display: flex;
+        // overflow: hidden;
+        display: block;
         position: relative;
         z-index: 2;
-        justify-content: space-between;
-        width: 1472px;
+        // border: 2px solid red;
+        // justify-content: space-between;
+        // width: 1472px;
+        padding-left: 4px;
         .partner__list--item {
           width: 214px;
           height: 214px;
+          margin-left: 36px;
+          display: block;
+          float: left;
           border: 2px solid rgba(42, 42, 42, 0.1);
           background-color: #fff;
           border-radius: 50%;
@@ -101,6 +104,9 @@
           cursor: pointer;
           &:hover {
             background-image: url(../assets/exported_assets/icons/mc_hover.svg);
+          }
+          &:first-child {
+            margin-left: 0;
           }
         }
       }
