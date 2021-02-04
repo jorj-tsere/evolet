@@ -574,7 +574,7 @@
         </h3>
 
         <div class="partner__list">
-          <div class="partner__list--wrapper-box">
+          <div class="partner__list--wrapper-box" id="partner__list--wrapper-box">
             <div class="partner__list--wrapper" id="partner__list--wrapper">
               <div class="partner__list--item">1</div>
               <div class="partner__list--item">2</div>
@@ -586,7 +586,7 @@
               <div class="partner__list--item">8</div>
               <div class="partner__list--item">9</div>
               <div class="partner__list--item">10</div>
-              <div style="clear:both;"></div>
+              <div style="clear: both"></div>
             </div>
           </div>
           <span class="partner__list--arrow arrow__left">
@@ -637,6 +637,54 @@
               </g>
             </svg>
           </span>
+        </div>
+
+        <style>
+      
+
+          .swiper-container {
+            width: 100%;
+            height: 200px;
+          }
+
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            background-color: red;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+          }
+        </style>
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
 
         <div class="section__partners--secondary-title-box">
@@ -1111,8 +1159,31 @@
     </section>
 
     <script>
-      var swiper_services = new Swiper('.services__touch--view', {
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
         spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      //   spaceBetween: 30,
+      var swiper_services = new Swiper('.services__touch--view', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
         pagination: {
           el: '.services__touch-pagination',
         },
@@ -1127,15 +1198,16 @@
 
       const parnters_carousel_wrapper = $('#partner__list--wrapper');
       const parnters_items = $('.partner__list--item');
-      const parnters_item_width =  Math.ceil($($('.partner__list--item')[0]).css('width').split('px')[0]);
-     
+      const parnters_item_width = Math.ceil(
+        $($('.partner__list--item')[0]).css('width').split('px')[0]
+      );
+
       console.log(parnters_item_width);
 
       const container_xlg = 1472;
       const count_partners = parnters_items.length;
-      const parnters_items_margin = 37;
+      const parnters_items_margin = 36;
       let busy_carousel = false;
-
 
       function toggle_burger_menu() {
         let that = $('#b-container');
@@ -1224,9 +1296,14 @@
       function carousel_slide(dir = -1) {
         // 1 right, -1 left
         let current_pos = parseInt(parnters_carousel_wrapper.css('left'), 10);
-        let next_position = current_pos + (dir * (parnters_item_width + parnters_items_margin));
-        if(current_pos === 0 &&  dir === 1) {
+        let next_position =
+          current_pos + dir * (parnters_item_width + parnters_items_margin);
+        console.log('window.outerWidth', window.outerWidth);
+        if (current_pos === 0 && dir === 1) {
           console.warn('left arrow limit');
+          return false;
+        } else if (next_position < -1000) {
+          console.warn('right arrow limit');
           return false;
         }
 
@@ -1239,18 +1316,21 @@
         // } else if(dir === -1 && (current_pos - (parnters_item_width + parnters_items_margin)) < 0)
         busy_carousel = true;
         parnters_carousel_wrapper.animate(
-          { left: '+=' + (dir * (parnters_item_width + parnters_items_margin)) + 'px' },
-          'slow', () => {
-            busy_carousel = false; 
+          {
+            left: next_position + 'px',
+          },
+          'slow',
+          () => {
+            busy_carousel = false;
           }
         );
-       
       }
 
-
       function get_total_carousel_width() {
-        return ((count_partners - 1) * parnters_items_margin) +
-          parnters_item_width * count_partners;
+        return (
+          (count_partners - 1) * parnters_items_margin +
+          parnters_item_width * count_partners
+        );
       }
 
       $(document).ready(function () {
@@ -1267,8 +1347,9 @@
 
         $('.partner__list--arrow').on('click', function () {
           let dir = $(this).hasClass('arrow__left') ? 1 : -1;
-          if(busy_carousel) return false;
+          if (busy_carousel) return false;
           carousel_slide(dir);
+          
         });
 
         parnters_carousel_wrapper.css('width', total_width);

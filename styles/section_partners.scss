@@ -87,12 +87,11 @@
         // border: 2px solid red;
         // justify-content: space-between;
         // width: 1472px;
-        padding-left: 4px;
+        // padding-left: 4px;
         .partner__list--item {
           width: 214px;
           height: 214px;
-          margin-left: 36px;
-          display: block;
+          margin-left:36px;
           float: left;
           border: 2px solid rgba(42, 42, 42, 0.1);
           background-color: #fff;
@@ -107,6 +106,9 @@
           }
           &:first-child {
             margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
           }
         }
       }

@@ -188,7 +188,7 @@
     width: calc((100vw - 88%) / 2 + 10px);
   }
   .section__container {
-    width: 88%;
+    width: 1200px;
   }
   .services_content_wrapper_bg {
     width: calc((100vw - ((100vw - 88%) / 2)) + 40px);
