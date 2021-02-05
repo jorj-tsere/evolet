@@ -341,13 +341,15 @@
 
 .services_content_wrapper .services__navigation .services__list .services__list--item .services__list--item-txt {
   position: absolute;
-  top: calc(100% + 24px);
+  top: 100%;
   width: 152px;
   left: 50%;
+  padding-top: 30px;
   text-align: center;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   line-height: 1.5;
+  cursor: pointer;
 }
 
 .services_content_wrapper .service__container {

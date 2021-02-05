@@ -183,13 +183,15 @@
         }
         .services__list--item-txt {
           position: absolute;
-          top: calc(100% + 24px);
+          top: 100%;
           width: 152px;
           left: 50%;
+          padding-top: 30px;
           text-align: center;
           transform: translate(-50%, 0);
           @extend .h8_fs;
           line-height: $standart_line_height;
+          cursor: pointer;
         }
       }
     }

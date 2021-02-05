@@ -6,7 +6,7 @@
   position: relative;
   width: 100%;
   background: url(../assets/exported_assets/background_photos/main_img_gradient_bg.png),
-    url(../assets/exported_assets/background_photos/Rectangle319.png),
+    url(../assets/exported_assets/background_photos/Rectangle319-min.png),
     no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -91,7 +91,7 @@
     @extend .h1_fs;
     font-weight: 700;
     line-height: 1.6;
-    max-width: 1200px;
+    max-width: 98%;
     color: $white;
   }
   .section__title--sm {
@@ -146,7 +146,7 @@
   }
 }
 
-.mobile__section_action{
+.mobile__section_action {
   padding: 16px 10px;
   border-radius: 5px;
   line-height: $standart_line_height;
@@ -163,7 +163,7 @@
       height: 100%;
       max-width: $content_max_width_xlg;
       margin: 0 auto;
-      padding: 0 30px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -182,9 +182,9 @@
           &::before {
             opacity: 1;
           }
-        }
-        .section__action--arrow {
-          right: 0;
+          svg {
+            margin-left: 70px;
+          }
         }
       }
       .section__action--title {
@@ -192,10 +192,16 @@
         color: $white;
         display: inline-flex;
         position: relative;
+        justify-content: space-between;
         height: 100%;
-        align-items: flex-end;
+        align-items: center;
         padding: 0 100px 4px 0;
         transition: padding 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        svg {
+          // transition: margin 0.3s ease-in-out;
+          position: absolute;
+          right: 0;
+        }
         .section__action--title-bg {
           position: absolute;
           left: 0;
@@ -213,14 +219,14 @@
         }
         &::before {
           content: '';
-          position: absolute;
-          right: calc(100% + 6px);
-          bottom: 10px;
+          transition: opacity 0.2s ease-in-out;
           background-color: $white;
           width: 40px;
           height: 3px;
           opacity: 0;
-          // transition: opacity 0.3s linear;
+          position: absolute;
+          right: 100%;
+          margin-right: 15px;
         }
       }
     }
@@ -248,25 +254,40 @@
     background: $white;
     transition: height 0.4s ease-in-out, background-color 0.2s ease-in-out;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    &.visible{
-       cursor: pointer; 
+    &.visible {
+      cursor: pointer;
+      .scroller__icon {
+        svg {
+          g {
+            opacity: 0.9;
+          }
+          path {
+            opacity: 0.9;
+          }
+        }
+      }
     }
     &.visible:hover {
       background-color: $main_blue;
       height: 192px;
       .scroller__icon {
-        background-image: url(../assets/exported_assets/icons/scroller_hover.svg);
+        svg {
+          g {
+            opacity: 1;
+            stroke: #fff;
+          }
+          path {
+            opacity: 1;
+            fill: #fff;
+          }
+        }
       }
     }
     .scroller__icon {
       display: inline-block;
-      height: 100px;
-      width: 34px;
-      background-image: url(../assets/exported_assets/icons/scroller_default.svg);
-      background-repeat: no-repeat;
+      padding: 10px 0;
     }
   }
 }
-

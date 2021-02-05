@@ -166,7 +166,7 @@
   height: 100vh;
   position: relative;
   width: 100%;
-  background: url(../assets/exported_assets/background_photos/main_img_gradient_bg.png), url(../assets/exported_assets/background_photos/Rectangle319.png), no-repeat center center;
+  background: url(../assets/exported_assets/background_photos/main_img_gradient_bg.png), url(../assets/exported_assets/background_photos/Rectangle319-min.png), no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -272,7 +272,7 @@
 .section__home .section__title {
   font-weight: 700;
   line-height: 1.6;
-  max-width: 1200px;
+  max-width: 98%;
   color: white;
 }
 
@@ -353,7 +353,7 @@
   height: 100%;
   max-width: 1472px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,8 +383,8 @@
   opacity: 1;
 }
 
-.section__action .section__action--content .section__action--content--inner:hover .section__action--arrow {
-  right: 0;
+.section__action .section__action--content .section__action--content--inner:hover .section__action--title svg {
+  margin-left: 70px;
 }
 
 .section__action .section__action--content .section__action--content--inner .section__action--title {
@@ -393,13 +393,21 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100%;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 100px 4px 0;
   -webkit-transition: padding 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   transition: padding 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.section__action .section__action--content .section__action--content--inner .section__action--title svg {
+  position: absolute;
+  right: 0;
 }
 
 .section__action .section__action--content .section__action--content--inner .section__action--title .section__action--title-bg {
@@ -422,13 +430,15 @@
 
 .section__action .section__action--content .section__action--content--inner .section__action--title::before {
   content: '';
-  position: absolute;
-  right: calc(100% + 6px);
-  bottom: 10px;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   background-color: white;
   width: 40px;
   height: 3px;
   opacity: 0;
+  position: absolute;
+  right: 100%;
+  margin-right: 15px;
 }
 
 .section__action .section__action--content .section__action--bg {
@@ -456,9 +466,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -468,19 +478,30 @@
   cursor: pointer;
 }
 
+.scroller.scroller-section--main.visible .scroller__icon svg g {
+  opacity: 0.9;
+}
+
+.scroller.scroller-section--main.visible .scroller__icon svg path {
+  opacity: 0.9;
+}
+
 .scroller.scroller-section--main.visible:hover {
   background-color: #0750e4;
   height: 192px;
 }
 
-.scroller.scroller-section--main.visible:hover .scroller__icon {
-  background-image: url(../assets/exported_assets/icons/scroller_hover.svg);
+.scroller.scroller-section--main.visible:hover .scroller__icon svg g {
+  opacity: 1;
+  stroke: #fff;
+}
+
+.scroller.scroller-section--main.visible:hover .scroller__icon svg path {
+  opacity: 1;
+  fill: #fff;
 }
 
 .scroller.scroller-section--main .scroller__icon {
   display: inline-block;
-  height: 100px;
-  width: 34px;
-  background-image: url(../assets/exported_assets/icons/scroller_default.svg);
-  background-repeat: no-repeat;
+  padding: 10px 0;
 }
