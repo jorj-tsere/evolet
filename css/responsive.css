@@ -487,6 +487,9 @@
     line-height: 1.5;
     text-align: center;
   }
+  .section__about .section__two--secondary-title {
+    margin-top: 50px;
+  }
   .section__about .section__two--txt-content {
     width: 100%;
   }

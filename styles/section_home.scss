@@ -251,7 +251,7 @@
     height: 13%;
     min-height: 140px;
     width: 100%;
-    background: $white;
+    // background: $white;
     transition: height 0.4s ease-in-out, background-color 0.2s ease-in-out;
     display: flex;
     align-items: center;
@@ -269,22 +269,22 @@
         }
       }
     }
-    &.visible:hover {
-      background-color: $main_blue;
-      height: 170px;
-      .scroller__icon {
-        svg {
-          g {
-            opacity: 1;
-            stroke: #fff;
-          }
-          path {
-            opacity: 1;
-            fill: #fff;
-          }
-        }
-      }
-    }
+    // &.visible:hover {
+    //   background-color: $main_blue;
+    //   height: 170px;
+    //   .scroller__icon {
+    //     svg {
+    //       g {
+    //         opacity: 1;
+    //         stroke: #fff;
+    //       }
+    //       path {
+    //         opacity: 1;
+    //         fill: #fff;
+    //       }
+    //     }
+    //   }
+    // }
     .scroller__icon {
       display: inline-block;
       padding: 10px 0;

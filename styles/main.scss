@@ -3,6 +3,8 @@
 @import 'fonts';
 @import 'ready-classes';
 @import 'b-menu';
+@import 'm-scroll-animate';
+
 
 body,
 html {
@@ -123,5 +125,5 @@ section {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }

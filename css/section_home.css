@@ -460,7 +460,6 @@
   height: 13%;
   min-height: 140px;
   width: 100%;
-  background: white;
   -webkit-transition: height 0.4s ease-in-out, background-color 0.2s ease-in-out;
   transition: height 0.4s ease-in-out, background-color 0.2s ease-in-out;
   display: -webkit-box;
@@ -484,21 +483,6 @@
 
 .scroller.scroller-section--main.visible .scroller__icon svg path {
   opacity: 0.9;
-}
-
-.scroller.scroller-section--main.visible:hover {
-  background-color: #0750e4;
-  height: 170px;
-}
-
-.scroller.scroller-section--main.visible:hover .scroller__icon svg g {
-  opacity: 1;
-  stroke: #fff;
-}
-
-.scroller.scroller-section--main.visible:hover .scroller__icon svg path {
-  opacity: 1;
-  fill: #fff;
 }
 
 .scroller.scroller-section--main .scroller__icon {

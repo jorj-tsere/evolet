@@ -124,8 +124,24 @@
           <div class="section__action--bg"></div>
         </div>
       </div>
+
+      <div class="scroller scroller-section--main">
+        <div class="scroller__icon">
+          <div class="mouse_scroll">
+            <div class="mouse">
+              <div class="wheel"></div>
+            </div>
+            <div>
+              <span class="m_scroll_arrows unu"></span>
+              <span class="m_scroll_arrows doi"></span>
+              <span class="m_scroll_arrows trei"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
-        class="scroller scroller-section--main visible"
+        class="scroller hidden scroller-section--main visible"
         target-section="about"
       >
         <span class="scroller__icon">
@@ -814,7 +830,9 @@
         <div class="section__line line__bg--bottom"></div>
       </div>
 
-      <div class="partner__section--asked-title-wrapper hidden desktop__version">
+      <div
+        class="partner__section--asked-title-wrapper hidden desktop__version"
+      >
         <h4 class="partner__section--asked-title">
           <a href="#" class="partner__section--asked-title-href">
             Want To Partner With Us?
@@ -1536,20 +1554,20 @@
         const email = $('#contact_form_email');
         let err_count = 0;
 
-        if(!validateEmail(email.val())){
+        if (!validateEmail(email.val())) {
           email.addClass('invalid');
           err_count++;
         } else {
           email.removeClass('invalid');
         }
-        if(!name || name.val().trim().length < 2) {
+        if (!name || name.val().trim().length < 2) {
           name.addClass('invalid');
           err_count++;
         } else {
           name.removeClass('invalid');
         }
 
-        if(!comment || comment.val().trim().length < 2) {
+        if (!comment || comment.val().trim().length < 2) {
           comment.addClass('invalid');
           err_count++;
         } else {
@@ -1560,14 +1578,12 @@
         console.log('name', name.val());
         console.log('email', email.val());
 
-        if(err_count) {
-            return false;
-        
-      }
+        if (err_count) {
+          return false;
+        }
 
-      alert('thanks for your comment.');
-      return false;
-
+        alert('thanks for your comment.');
+        return false;
       }
 
       function validateEmail(email) {
