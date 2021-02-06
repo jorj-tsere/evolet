@@ -128,37 +128,45 @@
   border: none;
   outline: none;
   background-color: #fff;
+  -webkit-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+  border: 2px solid transparent;
 }
 
 .section__footer .contact__form .contact__form--grid .contact__form--grid--inputs-box .contact__form-input:focus {
-  border-color: #6265e4 !important;
-  -webkit-box-shadow: 0 0 5px #6265e4 !important;
-          box-shadow: 0 0 5px #6265e4 !important;
+  border: 2px solid #555;
+}
+
+.section__footer .contact__form .contact__form--grid .contact__form--grid--inputs-box .contact__form-input.invalid {
+  border: 2px solid #cc3232;
 }
 
 .section__footer .contact__form .contact__form--grid .contact__form--grid--inputs-box .contact__form--grid--textarea {
   margin-top: 20px;
 }
 
-.section__footer .contact__form .contact__form--grid #commet_body {
+.section__footer .contact__form .contact__form--grid #contact_form_commet_body {
   padding: 10px 14px;
   height: 28px;
   overflow: auto;
+  font-family: 'Montserrat';
   resize: none;
   width: 100%;
   margin-top: 20px;
+  font-size: 18px;
   height: 328px;
   line-height: 1.5;
   color: #2a2a2a;
   background-color: #fff;
-  border-style: none;
-  border-color: Transparent;
+  border: 2px solid transparent;
 }
 
-.section__footer .contact__form .contact__form--grid #commet_body:focus {
-  border-color: #6265e4 !important;
-  -webkit-box-shadow: 0 0 5px #6265e4 !important;
-          box-shadow: 0 0 5px #6265e4 !important;
+.section__footer .contact__form .contact__form--grid #contact_form_commet_body:focus {
+  border: 2px solid #555;
+}
+
+.section__footer .contact__form .contact__form--grid #contact_form_commet_body.invalid {
+  border: 2px solid #cc3232;
 }
 
 .section__footer .contact__form .contact__form--grid .contact__form--grid-submit-wrapper {
@@ -166,7 +174,7 @@
   margin-top: 14px;
 }
 
-.section__footer .contact__form .contact__form--grid .contact__form--grid-submit-wrapper .contact__form-submit-submit-btn {
+.section__footer .contact__form .contact__form--grid .contact__form--grid-submit-wrapper .contact__form-submit-btn {
   padding: 20px 90px;
 }
 
@@ -185,4 +193,8 @@
 
 .section__footer .copyright .copyright__content {
   margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
 }

@@ -109,6 +109,7 @@
         width: 100%;
         grid-template-columns: 1fr 1fr;
         gap: 16px;
+ 
         .contact__form-input {
           padding: 16px 14px;
           font-size: $h8_fs;
@@ -116,10 +117,14 @@
           border: none;
           outline: none;
           background-color: #fff;
-
+          -webkit-transition: border-color 0.5s;
+          transition: border-color 0.5s;
+          border: 2px solid transparent;
           &:focus {
-            border-color: #6265e4 !important;
-            box-shadow: 0 0 5px rgba(98, 101, 228, 1) !important;
+            border: 2px solid #555;
+          }
+          &.invalid {
+            border: 2px solid rgb(204, 50, 50);
           }
         }
         .contact__form--grid--textarea {
@@ -127,33 +132,32 @@
         }
       }
 
-      #commet_body {
-        // -moz-appearance: textfield-multiline;
-        // -webkit-appearance: textarea;
-        // font: medium -moz-fixed;
-        // font: -webkit-small-control;
+      #contact_form_commet_body {
         padding: 10px 14px;
         height: 28px;
         overflow: auto;
+        font-family: 'Montserrat';
         resize: none;
         width: 100%;
         margin-top: 20px;
+        font-size: $h8_fs;
         height: 328px;
         line-height: $standart_line_height;
         color: #2a2a2a;
         background-color: #fff;
-        border-style: none;
-        border-color: Transparent;
+        border: 2px solid transparent;
         &:focus {
-          border-color: #6265e4 !important;
-          box-shadow: 0 0 5px rgba(98, 101, 228, 1) !important;
+          border: 2px solid #555;
+        }
+        &.invalid {
+          border: 2px solid rgb(204, 50, 50);
         }
       }
 
       .contact__form--grid-submit-wrapper {
         text-align: right;
         margin-top: 14px;
-        .contact__form-submit-submit-btn {
+        .contact__form-submit-btn {
           padding: 20px 90px;
         }
       }
@@ -173,4 +177,8 @@
       margin-bottom: 20px;
     }
   }
+}
+
+textarea {
+  width: 100%;
 }

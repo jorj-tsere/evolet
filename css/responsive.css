@@ -169,7 +169,7 @@
     line-height: 1.5;
   }
   .section__main .section__home {
-    margin: 38px auto 80px !important;
+    margin: 38px auto 40px !important;
   }
   .section__main .section__home .section__title {
     font-size: 30px !important;
@@ -178,10 +178,10 @@
     font-size: 20px !important;
   }
   .scroller.scroller-section--main {
-    min-height: 100px !important;
+    min-height: 80px !important;
   }
   .scroller.scroller-section--main.visible:hover {
-    height: 140px !important;
+    height: 90px !important;
   }
 }
 
@@ -205,24 +205,36 @@
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   .section__partners .section__line.line__bg {
-    width: calc((100vw - 1200px) / 2 + 10px);
+    width: calc((100vw - 1216px) / 2 + 50px);
+  }
+  .partner__list--item {
+    width: 198px !important;
+    height: 198px !important;
   }
   .section__action .section__action--content .section__action--content--inner {
-    max-width: 1200px;
+    max-width: 1216px;
   }
   .section__container {
-    width: 1200px;
+    width: 1216px;
   }
   .services_content_wrapper_bg {
-    width: calc((100vw - ((100vw - 1200px) / 2)) + 40px);
+    width: calc((100vw - ((100vw - 1216px) / 2)) + 40px);
   }
   .section__main .section__title {
     font-size: 50px;
   }
   .section__about .pseudo_line_bg {
-    width: calc((100vw - 1200px) / 2 - 20px);
+    width: calc((100vw - 1216px) / 2 - 20px);
+  }
+  .idiom__title {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .idiom__title .quotes {
+    width: 80px;
+    height: 80px;
   }
   .section__action--bg {
     width: calc(60% - (456px / 1.2));
@@ -232,7 +244,28 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1350px) {
+  .section__about {
+    padding-bottom: 120px;
+  }
+  .partner__list--item {
+    width: 196px !important;
+    height: 196px !important;
+    margin-left: 56px !important;
+  }
+  .partner__list--item:first-of-type {
+    margin-left: 0 !important;
+  }
+  .partner__list--arrow {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .partner__list--arrow.arrow__left {
+    right: 100% !important;
+  }
+  .partner__list--arrow.arrow__right {
+    left: 100% !important;
+  }
   .section__action--bg {
     width: calc(50% - (450px / 1.2)) !important;
   }
@@ -269,6 +302,9 @@
   html {
     padding-bottom: 0;
   }
+  .partner__list {
+    width: 100% !important;
+  }
   .section__footer .contact__form--title {
     font-size: 25px !important;
     padding: 50px 0 !important;
@@ -291,6 +327,9 @@
     font-size: 20px !important;
     padding: 10px 0 20px !important;
   }
+  .section__projects {
+    margin-top: 100px;
+  }
   .projects__touch--view .projects__touch-pagination {
     margin-bottom: 20px;
   }
@@ -310,9 +349,8 @@
     width: 100%;
   }
   .projects__touch--view .swiper-slide .project__details--img img {
-    width: 90%;
+    max-width: 100%;
     height: auto;
-    border-radius: 5px;
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
@@ -477,7 +515,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    border-radius: 5px;
     -webkit-transition: none;
     transition: none;
     font-size: 20px !important;
@@ -516,7 +553,7 @@
   }
   .services_content_wrapper .service__img {
     margin: 0 auto;
-    width: 84%;
+    width: 100%;
     max-width: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -526,7 +563,6 @@
   .services_content_wrapper .service__img img {
     width: 70%;
     display: block;
-    border-radius: 5px;
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
@@ -553,7 +589,7 @@
   }
   .services_content_wrapper .service__img {
     margin: 0 auto 30px;
-    width: 94%;
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -562,7 +598,6 @@
     overflow: hidden;
     width: 100%;
     height: auto;
-    border-radius: 5px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }

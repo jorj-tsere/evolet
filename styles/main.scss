@@ -61,27 +61,25 @@ section {
   width: 100%;
   height: 100%;
   transform: translate(100%);
-  background-color: rgba(44, 62, 80, 1.0);
+  background-color: rgba(44, 62, 80, 1);
   cursor: pointer;
   transition: transform 0.4s ease-in-out;
   z-index: 3333;
   color: #fff;
 
-  .burger_menu--tab-item{
+  .burger_menu--tab-item {
     padding: 20px 20px;
     text-transform: capitalize;
     font-weight: 700;
-    border-bottom: 1px solid rgba(255,255,255,0.41);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.41);
   }
- 
+
   &.open {
-    transform: translate(0);  
+    transform: translate(0);
   }
   &.close {
     transform: translate(100%);
   }
-
-  
 }
 
 @-webkit-keyframes slideInLeft {
@@ -122,4 +120,8 @@ section {
 }
 * {
   box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
 }

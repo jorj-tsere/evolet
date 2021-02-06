@@ -488,7 +488,7 @@
 
 .scroller.scroller-section--main.visible:hover {
   background-color: #0750e4;
-  height: 192px;
+  height: 170px;
 }
 
 .scroller.scroller-section--main.visible:hover .scroller__icon svg g {
